@@ -1,0 +1,269 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+.container { padding: 1rem 0; }
+.header { text-align: center; margin-bottom: 1.5rem; }
+.header h1 { font-size: 20px; font-weight: 500; color: var(--color-text-primary); }
+.header p { font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; }
+
+.score-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 1.5rem; }
+.score-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px; text-align: center; }
+.score-card .num { font-size: 22px; font-weight: 500; color: var(--color-text-primary); }
+.score-card .lbl { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
+
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1rem; }
+.tab { padding: 6px 12px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); font-size: 12px; cursor: pointer; background: var(--color-background-primary); color: var(--color-text-secondary); transition: all 0.15s; }
+.tab.active { background: #3C3489; color: #EEEDFE; border-color: #3C3489; }
+
+.chapter-section { margin-bottom: 1.2rem; }
+.chapter-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); padding: 8px 12px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; border: 0.5px solid var(--color-border-tertiary); }
+.chapter-title span { font-size: 11px; color: var(--color-text-secondary); font-weight: 400; }
+.chapter-title .marks-badge { background: #EEEDFE; color: #3C3489; font-size: 11px; padding: 2px 8px; border-radius: 20px; }
+
+.q-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px 14px; margin-bottom: 8px; }
+.q-meta { display: flex; gap: 6px; align-items: center; margin-bottom: 8px; flex-wrap: wrap; }
+.badge { font-size: 10px; padding: 2px 8px; border-radius: 20px; font-weight: 500; }
+.badge.easy { background: #EAF3DE; color: #3B6D11; }
+.badge.medium { background: #FAEEDA; color: #854F0B; }
+.badge.hard { background: #FCEBEB; color: #A32D2D; }
+.badge.type { background: var(--color-background-secondary); color: var(--color-text-secondary); }
+.badge.marks { background: #E6F1FB; color: #185FA5; }
+.q-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; }
+.q-hint { font-size: 11px; color: var(--color-text-secondary); margin-top: 6px; border-top: 0.5px solid var(--color-border-tertiary); padding-top: 6px; }
+.answer-box { display: none; margin-top: 8px; padding: 8px 10px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); font-size: 12px; color: var(--color-text-primary); line-height: 1.6; }
+.answer-box.show { display: block; }
+.show-ans-btn { font-size: 11px; color: #185FA5; cursor: pointer; border: none; background: none; padding: 4px 0; margin-top: 4px; }
+
+.filter-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1rem; }
+.filter-btn { padding: 4px 10px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); font-size: 11px; cursor: pointer; background: var(--color-background-primary); color: var(--color-text-secondary); }
+.filter-btn.active { background: #E1F5EE; color: #0F6E56; border-color: #0F6E56; }
+
+.progress-wrap { margin-bottom: 1.5rem; }
+.progress-label { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px; display: flex; justify-content: space-between; }
+.progress-bar { height: 6px; background: var(--color-background-secondary); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: #534AB7; border-radius: 3px; transition: width 0.3s; }
+
+.no-q { text-align: center; padding: 2rem; color: var(--color-text-secondary); font-size: 13px; }
+</style>
+
+<div class="container">
+<h2 class="sr-only">CBSE Class 12 Chemistry Exam Prep — 70 marks question bank covering Solutions, Biomolecules, Haloalkanes & Haloarenes, Alcohols Phenols & Ethers, and Amines</h2>
+
+<div class="header">
+  <h1>🧪 CBSE Class 12 Chemistry — Exam Prep</h1>
+  <p>70 marks · All chapters · Easy + Medium + Hard questions</p>
+</div>
+
+<div class="score-bar">
+  <div class="score-card"><div class="num" id="total-q">0</div><div class="lbl">Total Questions</div></div>
+  <div class="score-card"><div class="num" id="easy-q" style="color:#3B6D11">0</div><div class="lbl">Easy</div></div>
+  <div class="score-card"><div class="num" id="med-q" style="color:#854F0B">0</div><div class="lbl">Medium</div></div>
+  <div class="score-card"><div class="num" id="hard-q" style="color:#A32D2D">0</div><div class="lbl">Hard</div></div>
+</div>
+
+<div class="progress-wrap">
+  <div class="progress-label"><span>Chapter coverage</span><span id="prog-txt">0 / 5 chapters</span></div>
+  <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:100%"></div></div>
+</div>
+
+<div class="tabs" id="chapter-tabs"></div>
+<div class="filter-row" id="diff-filters">
+  <button class="filter-btn active" onclick="setDiff('all',this)">All levels</button>
+  <button class="filter-btn" onclick="setDiff('easy',this)">Easy</button>
+  <button class="filter-btn" onclick="setDiff('medium',this)">Medium</button>
+  <button class="filter-btn" onclick="setDiff('hard',this)">Hard</button>
+</div>
+
+<div id="questions-area"></div>
+</div>
+
+<script>
+const data = {
+  chapters: [
+    {
+      id: 'solutions',
+      name: 'Solutions',
+      color: '#3C3489',
+      marks: 14,
+      questions: [
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"Define mole fraction. What is the sum of mole fractions of all components in a solution?", hint:"Formula: x₁ = n₁/(n₁+n₂)", ans:"Mole fraction of a component = moles of that component ÷ total moles of all components. Sum of all mole fractions = 1." },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"State Henry's law. Write its mathematical form.", hint:"p = K_H · x", ans:"The partial pressure of a gas in vapour phase (p) is proportional to its mole fraction (x) in solution: p = K_H × x, where K_H is Henry's law constant." },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"What is the effect of temperature on the solubility of a gas in liquid?", hint:"Think Le Chatelier's principle", ans:"Solubility of gas in liquid decreases with increase in temperature (dissolution of gas is exothermic)." },
+        { type:'SA (2M)', marks:2, diff:'easy', q:"Distinguish between ideal and non-ideal solutions with one example each.", hint:"Raoult's law compliance", ans:"Ideal solutions obey Raoult's law, ΔH_mix = 0, ΔV_mix = 0 (e.g. benzene + toluene). Non-ideal solutions show deviations from Raoult's law (e.g. ethanol + water shows positive deviation; HCl + water shows negative deviation)." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"Calculate the mole fraction of ethanol in a solution containing 46g ethanol and 36g water. (Molar mass: ethanol=46, water=18)", hint:"Find moles first, then mole fraction", ans:"Moles of ethanol = 46/46 = 1 mol. Moles of water = 36/18 = 2 mol. x(ethanol) = 1/(1+2) = 1/3 = 0.333" },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"What are colligative properties? Name all four.", hint:"Depend on number of solute particles", ans:"Properties that depend only on the number of solute particles (not their nature): (1) Relative lowering of vapour pressure, (2) Elevation in boiling point, (3) Depression in freezing point, (4) Osmotic pressure." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"Explain why a solution of NaCl has a higher boiling point than pure water.", hint:"Colligative property — boiling point elevation", ans:"NaCl dissociates into Na⁺ and Cl⁻ ions, increasing the number of solute particles. This causes greater elevation in boiling point (ΔTb = iKb·m) compared to a non-electrolyte solution of same molality." },
+        { type:'LA (3M)', marks:3, diff:'medium', q:"State Raoult's law for a solution of volatile liquids. Derive the expression for relative lowering of vapour pressure.", hint:"p = x₁p°₁ + x₂p°₂ → (p°-p)/p° = x₂", ans:"Raoult's law: partial vapour pressure of each component = mole fraction × vapour pressure of pure component. For binary solution: p = x₁p°₁ + x₂p°₂. Relative lowering = (p° − p)/p° = x₂ (mole fraction of solute). This is a colligative property." },
+        { type:'LA (3M)', marks:3, diff:'hard', q:"A solution of sucrose (M=342) is prepared by dissolving 34.2g in 1000g water. Calculate: (a) molality (b) depression in freezing point (Kf of water = 1.86 K kg/mol)", hint:"ΔTf = Kf × m", ans:"(a) Moles of sucrose = 34.2/342 = 0.1 mol. Molality = 0.1/1 = 0.1 m. (b) ΔTf = Kf × m = 1.86 × 0.1 = 0.186 K. So freezing point = 0 − 0.186 = −0.186°C" },
+        { type:'LA (3M)', marks:3, diff:'hard', q:"Explain Van't Hoff factor. Why is it >1 for electrolytes and <1 for associating solutes? Give one example each.", hint:"i = observed colligative property / normal value", ans:"i = (observed value of colligative property)/(calculated value assuming no dissociation/association). For electrolytes (e.g. NaCl): i > 1 because dissociation increases particle count. For associating solutes (e.g. acetic acid in benzene): i < 1 because association reduces particle count." },
+      ]
+    },
+    {
+      id: 'biomolecules',
+      name: 'Biomolecules',
+      color: '#0F6E56',
+      marks: 14,
+      questions: [
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"What is the monomer unit of proteins?", hint:"Amino acids", ans:"Amino acids (α-amino acids) are the monomer units of proteins." },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"Name the purine bases present in DNA.", hint:"Two purines in DNA", ans:"Adenine (A) and Guanine (G) are the purine bases in DNA." },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"What is a peptide bond? In which type of biomolecule is it found?", hint:"–CO–NH– linkage", ans:"A peptide bond is an amide linkage (–CO–NH–) formed between the –COOH group of one amino acid and the –NH₂ group of another. Found in proteins." },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"Distinguish between reducing and non-reducing sugars with one example each.", hint:"Aldehyde/ketone group availability", ans:"Reducing sugars have free –CHO or –C=O group and reduce Tollens'/Fehling's reagent (e.g. glucose, fructose, maltose). Non-reducing sugars lack free reducing group (e.g. sucrose)." },
+        { type:'SA (2M)', marks:2, diff:'easy', q:"What are enzymes? State two characteristic properties of enzymes.", hint:"Biological catalysts", ans:"Enzymes are biological catalysts (proteins) that catalyse biochemical reactions. Properties: (1) Highly specific — one enzyme catalyses one type of reaction. (2) Highly efficient — small amount catalyses large amount of substrate. (3) Work at optimal temperature and pH." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"Differentiate between DNA and RNA on the basis of (a) sugar present (b) pyrimidine bases.", hint:"Deoxyribose vs ribose; thymine vs uracil", ans:"DNA: sugar = deoxyribose; pyrimidine bases = Thymine (T) and Cytosine (C). RNA: sugar = ribose; pyrimidine bases = Uracil (U) and Cytosine (C)." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"What is mutarotation? Explain with reference to glucose.", hint:"α and β forms interconvert in solution", ans:"Mutarotation is the change in optical rotation of α and β anomers of a sugar when dissolved in water until equilibrium is reached. α-D-glucose ([α]= +112°) and β-D-glucose ([α]= +18.7°) interconvert in solution giving equilibrium mixture with [α]= +52.5°." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"What are vitamins? Classify them with examples.", hint:"Fat-soluble and water-soluble", ans:"Vitamins are organic compounds essential in small amounts for normal metabolism. Fat-soluble: A, D, E, K (stored in body). Water-soluble: B-complex (B₁, B₂, B₆, B₁₂) and C (not stored, needed regularly)." },
+        { type:'LA (3M)', marks:3, diff:'hard', q:"Explain the primary, secondary, tertiary, and quaternary structure of proteins.", hint:"1°=sequence, 2°=helix/sheet, 3°=3D folding, 4°=multiple chains", ans:"1° structure: sequence of amino acids linked by peptide bonds. 2° structure: coiling (α-helix) or folding (β-pleated sheet) due to H-bonds. 3° structure: 3D arrangement of polypeptide chain — interactions via S–S bonds, H-bonds, ionic and hydrophobic interactions. 4° structure: two or more polypeptide chains (subunits) associated together (e.g. haemoglobin has 4 subunits)." },
+        { type:'LA (3M)', marks:3, diff:'hard', q:"Write the open chain structure of glucose. Give any four evidences that prove it has an aldehyde group.", hint:"C₆H₁₂O₆ with –CHO at C1", ans:"Glucose (C₆H₁₂O₆): CH₂OH–CHOH–CHOH–CHOH–CHOH–CHO. Evidence for –CHO: (1) Reduces Tollens' and Fehling's reagents. (2) Reacts with NH₂OH to form oxime. (3) Reacts with HCN to give cyanohydrin. (4) On mild oxidation gives gluconic acid (monocarboxylic acid)." },
+      ]
+    },
+    {
+      id: 'haloalkanes',
+      name: 'Haloalkanes & Haloarenes',
+      color: '#993C1D',
+      marks: 14,
+      questions: [
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"What is the IUPAC name of CHCl₃?", hint:"Trichloromethane", ans:"Trichloromethane (common name: Chloroform)" },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"Why are alkyl halides polar even though C–X bond is covalent?", hint:"Electronegativity difference", ans:"Because halogens are more electronegative than carbon, the C–X bond is polarised with δ+ on C and δ– on X, making the molecule polar." },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"What happens when chlorobenzene reacts with Mg in dry ether?", hint:"Grignard reagent formation", ans:"Chlorobenzene reacts with Mg in dry ether to form phenyl magnesium chloride (C₆H₅MgCl) — a Grignard reagent." },
+        { type:'SA (2M)', marks:2, diff:'easy', q:"Distinguish between SN1 and SN2 mechanisms with one example each.", hint:"Tertiary → SN1, Primary → SN2", ans:"SN1: Two-step; involves carbocation intermediate; favoured by tertiary halides and polar protic solvents (e.g. (CH₃)₃CBr + OH⁻). SN2: One-step; backside attack; inversion of configuration; favoured by primary halides (e.g. CH₃Br + OH⁻ → CH₃OH)." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"Explain why haloarenes are less reactive than haloalkanes towards nucleophilic substitution.", hint:"Resonance — C–X bond has partial double bond character", ans:"In haloarenes, the lone pair of halogen is in conjugation with the π system of benzene ring (resonance), giving C–X bond partial double bond character. This makes the bond stronger and shorter, and also the ring is electron-rich, repelling nucleophiles. Hence less reactive than haloalkanes." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"What is the Finkelstein reaction? Give the reaction and its use.", hint:"Alkyl chloride + NaI in acetone", ans:"Finkelstein reaction: alkyl chloride or bromide + NaI in dry acetone → alkyl iodide + NaCl/NaBr. e.g. CH₃Cl + NaI → CH₃I + NaCl. NaCl/NaBr precipitate out, driving reaction forward. Used to prepare alkyl iodides." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"Write the reaction of 1-bromopropane with: (a) KOH/alcoholic (b) KOH/aqueous", hint:"Elimination vs substitution", ans:"(a) Alcoholic KOH: elimination (dehydrohalogenation) → CH₃CH=CH₂ (propene) + KBr + H₂O. (b) Aqueous KOH: nucleophilic substitution → CH₃CH₂CH₂OH (propan-1-ol) + KBr." },
+        { type:'LA (3M)', marks:3, diff:'medium', q:"Explain with mechanism: why does the reaction of (CH₃)₃CBr with OH⁻ give mainly alkene and not alcohol?", hint:"SN1 vs E1 — tertiary carbocation favours elimination", ans:"(CH₃)₃CBr ionises to give (CH₃)₃C⁺ (stable 3° carbocation). OH⁻ can either: (a) attack carbocation → (CH₃)₃COH (SN1, minor), or (b) abstract β-H → (CH₃)₂C=CH₂ (E1, major). Since 3° carbocations are stabilised and the bulky substrate favours elimination, alkene is the major product (Zaitsev's rule)." },
+        { type:'LA (3M)', marks:3, diff:'hard', q:"How is DDT prepared? Why is it considered an environmental hazard?", hint:"Chlorobenzene + chloral, non-biodegradable", ans:"DDT (dichlorodiphenyltrichloroethane) is prepared by reacting chlorobenzene with chloral (CCl₃CHO) in presence of conc. H₂SO₄. Environmental hazard: DDT is non-biodegradable and accumulates in food chains (biomagnification). It accumulates in fatty tissues of animals and birds, affecting reproduction and nervous system." },
+        { type:'LA (3M)', marks:3, diff:'hard', q:"Explain optical isomerism in haloalkanes. What is a chiral carbon? Give example.", hint:"4 different groups on carbon", ans:"Optical isomers are non-superimposable mirror images (enantiomers). A chiral carbon (stereocentre) has 4 different groups attached to it. Example: 2-bromobutane (CH₃CHBrCH₂CH₃) — C2 has 4 different groups (H, Br, CH₃, C₂H₅), so it is chiral and exists as R and S enantiomers that rotate plane-polarised light equally but in opposite directions." },
+      ]
+    },
+    {
+      id: 'alcohol',
+      name: 'Alcohols, Phenols & Ethers',
+      color: '#185FA5',
+      marks: 14,
+      questions: [
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"Why is phenol more acidic than ethanol?", hint:"Phenoxide ion — resonance stabilisation", ans:"Phenoxide ion (C₆H₅O⁻) is stabilised by resonance with benzene ring, while ethoxide ion (C₂H₅O⁻) is not. Hence phenol is a stronger acid than ethanol." },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"Give the IUPAC name of C₂H₅OC₂H₅.", hint:"Ethoxyethane", ans:"Ethoxyethane (also called diethyl ether)" },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"What is Lucas test? Which alcohol gives an immediate turbidity with Lucas reagent?", hint:"Anhydrous ZnCl₂ + conc. HCl", ans:"Lucas test uses anhydrous ZnCl₂ + conc. HCl. Tertiary alcohols give immediate turbidity (cloudiness) due to fast formation of insoluble alkyl chloride." },
+        { type:'SA (2M)', marks:2, diff:'easy', q:"Arrange the following in increasing order of boiling point: n-butane, butan-1-ol, diethyl ether. Justify.", hint:"H-bonding ability", ans:"n-butane < diethyl ether < butan-1-ol. Butan-1-ol has intermolecular H-bonding (highest bp). Diethyl ether has dipole-dipole interactions. n-butane has only weak van der Waals forces (lowest bp)." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"How is phenol prepared from (a) chlorobenzene (b) cumene?", hint:"Two industrial methods", ans:"(a) Chlorobenzene + NaOH (350°C, 200 atm) → sodium phenoxide → + HCl → phenol (Dow process). (b) Cumene (isopropylbenzene) + O₂ → cumene hydroperoxide → dilute H₂SO₄ → phenol + acetone (industrial method)." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"What is the Victor Meyer test? How does it distinguish 1°, 2°, and 3° alcohols?", hint:"Red / blue / colourless", ans:"Alcohols → alkyl halide → react with AgNO₂ → nitroalkane → react with HNO₂ then NaOH: 1° alcohol → red colour; 2° alcohol → blue colour; 3° alcohol → no colour (colourless). This distinguishes the three classes." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"Explain why ethers are less reactive than alcohols.", hint:"No O–H bond, lone pairs less available due to two alkyl groups", ans:"Ethers have no O–H bond so they cannot form H-bonds with themselves (lower bp than comparable alcohols). The lone pairs on oxygen are less available due to +I effect of two alkyl groups, making ethers poor nucleophiles and weak bases. Hence less reactive than alcohols." },
+        { type:'LA (3M)', marks:3, diff:'medium', q:"Explain the mechanism of acid-catalysed dehydration of ethanol to ethylene.", hint:"Protonation → carbocation → elimination", ans:"Step 1: Protonation of –OH by H₂SO₄ → forms oxonium ion (C₂H₅OH₂⁺). Step 2: Loss of water → forms carbocation (C₂H₅⁺). Step 3: Loss of β-H → formation of ethylene (CH₂=CH₂). Conditions: conc. H₂SO₄, 170°C favours elimination over substitution." },
+        { type:'LA (3M)', marks:3, diff:'hard', q:"Write the reactions to show: (a) Kolbe's reaction (b) Reimer-Tiemann reaction of phenol.", hint:"CO₂/NaOH; CHCl₃/NaOH", ans:"(a) Kolbe's reaction: Sodium phenoxide + CO₂ (high pressure, 125°C) → sodium salicylate → + HCl → salicylic acid (2-hydroxybenzoic acid). (b) Reimer-Tiemann: Phenol + CHCl₃ + NaOH → intermediate dichlorocarbene attacks ring → salicylaldehyde (2-hydroxybenzaldehyde) as major product." },
+        { type:'LA (3M)', marks:3, diff:'hard', q:"What is Williamson synthesis? Why can't tertiary alkyl halides be used? Give one example.", hint:"SN2 — tertiary gives elimination", ans:"Williamson synthesis: sodium alkoxide + alkyl halide → ether (SN2 reaction). E.g. C₂H₅ONa + CH₃Br → C₂H₅OCH₃ + NaBr. Tertiary alkyl halides cannot be used because bulky 3° halides undergo elimination (E2) instead of substitution with the nucleophilic alkoxide. So we use the tertiary group as the alkoxide, not the halide." },
+      ]
+    },
+    {
+      id: 'amines',
+      name: 'Amines (up to 9.5)',
+      color: '#854F0B',
+      marks: 14,
+      questions: [
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"Arrange CH₃NH₂, (CH₃)₂NH, (CH₃)₃N in decreasing order of basic strength in aqueous solution.", hint:"Solvation effect matters in water", ans:"(CH₃)₂NH > CH₃NH₂ > (CH₃)₃N. In aqueous solution, 2° amine is most basic due to balance of +I effect and solvation. 3° amine is least basic (poor solvation of bulky trimethylammonium ion)." },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"Why are amines basic in nature?", hint:"Lone pair on nitrogen", ans:"Amines have a lone pair of electrons on nitrogen which can be donated to a proton (Lewis base / Brønsted base), making them basic." },
+        { type:'VSA (1M)', marks:1, diff:'easy', q:"Give the IUPAC name of C₆H₅NH₂.", hint:"Benzenamine / aniline", ans:"Benzenamine (common name: Aniline)" },
+        { type:'SA (2M)', marks:2, diff:'easy', q:"Distinguish between primary, secondary, and tertiary amines using a chemical test.", hint:"Hinsberg's test — benzenesulphonyl chloride", ans:"Hinsberg's test: React amine with benzenesulphonyl chloride (C₆H₅SO₂Cl) + KOH. 1° amine: forms sulphonamide soluble in KOH. 2° amine: forms sulphonamide insoluble in KOH. 3° amine: no reaction (no N–H bond)." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"Why is aniline a weaker base than methylamine?", hint:"Lone pair delocalisation into benzene ring", ans:"In aniline, the lone pair on N is delocalised into the benzene ring by resonance, making it less available for protonation. In methylamine, the +I effect of CH₃ increases electron density on N and it's not involved in resonance. Hence aniline is a much weaker base (pKb ≈ 9.4) than CH₃NH₂ (pKb ≈ 3.4)." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"How is aniline converted to (a) acetanilide (b) chlorobenzene?", hint:"Acetylation and Sandmeyer reaction", ans:"(a) Aniline + acetic anhydride → acetanilide (C₆H₅NHCOCH₃) + acetic acid (acetylation). (b) Aniline + NaNO₂ + HCl (0–5°C) → benzenediazonium chloride → + CuCl → chlorobenzene + N₂ (Sandmeyer reaction)." },
+        { type:'SA (2M)', marks:2, diff:'medium', q:"What is Gabriel phthalimide synthesis? Write the reaction sequence.", hint:"Phthalimide → K-phthalimide → alkyl halide → hydrolysis", ans:"Step 1: Phthalimide + KOH → potassium phthalimide. Step 2: + alkyl halide (RX) → N-alkyl phthalimide. Step 3: + NaOH/H₂O (hydrolysis) → primary amine (RNH₂) + phthalic acid. Used to prepare pure 1° aliphatic amines (no 2° or 3° contamination)." },
+        { type:'LA (3M)', marks:3, diff:'medium', q:"Explain the preparation of amines by (a) reduction of nitro compounds (b) Hofmann bromamide degradation.", hint:"Fe/HCl for nitro; Br₂/NaOH gives 1° amine", ans:"(a) Nitro reduction: R–NO₂ + 3[H] (Fe/HCl or H₂/Ni) → R–NH₂. E.g. nitrobenzene → aniline. (b) Hofmann bromamide: RCONH₂ + Br₂ + 4NaOH → RNH₂ + Na₂CO₃ + 2NaBr + 2H₂O. Product amine has one C less than starting amide — useful for degradation. Gives only 1° amines." },
+        { type:'LA (3M)', marks:3, diff:'hard', q:"Explain diazotisation reaction. How is benzenediazonium salt used to prepare (a) phenol (b) iodobenzene (c) benzene?", hint:"Sandmeyer and Balz-Schiemann reactions", ans:"Diazotisation: Aniline + NaNO₂ + HCl (0–5°C) → C₆H₅N₂⁺Cl⁻ (benzenediazonium chloride). Uses: (a) Phenol: + H₂O (warm, 50°C) → C₆H₅OH + N₂ + HCl. (b) Iodobenzene: + KI → C₆H₅I + N₂ + KCl (Sandmeyer). (c) Benzene: + H₃PO₂ + H₂O → C₆H₆ + N₂ + H₃PO₃ (reduction/deamination)." },
+        { type:'LA (3M)', marks:3, diff:'hard', q:"Compare the basicity of aliphatic amines vs aniline. How does electron-withdrawing and electron-donating substituents on ring affect aniline's basicity?", hint:"Resonance vs inductive; –NO₂ decreases, –CH₃ increases basicity", ans:"Aliphatic amines (pKb ~3-4) are much stronger bases than aniline (pKb 9.4) because the lone pair in aniline is delocalised into ring. For substituted anilines: EDG (–CH₃, –OCH₃) at para/ortho increases electron density on N → more basic than aniline. EWG (–NO₂, –Cl) at para/ortho decreases electron density on N → less basic than aniline. Para-nitroaniline is the weakest base." },
+      ]
+    }
+  ]
+};
+
+let activeChapter = 'all';
+let activeDiff = 'all';
+
+function init() {
+  const tabs = document.getElementById('chapter-tabs');
+  tabs.innerHTML = `<button class="tab active" onclick="setChapter('all',this)">All Chapters</button>`;
+  data.chapters.forEach(ch => {
+    tabs.innerHTML += `<button class="tab" onclick="setChapter('${ch.id}',this)">${ch.name}</button>`;
+  });
+  updateStats();
+  render();
+}
+
+function setChapter(id, el) {
+  activeChapter = id;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  render();
+}
+
+function setDiff(d, el) {
+  activeDiff = d;
+  document.querySelectorAll('.filter-btn').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  render();
+}
+
+function updateStats() {
+  let all = [], easy = [], med = [], hard = [];
+  data.chapters.forEach(ch => {
+    ch.questions.forEach(q => {
+      all.push(q);
+      if(q.diff==='easy') easy.push(q);
+      else if(q.diff==='medium') med.push(q);
+      else hard.push(q);
+    });
+  });
+  document.getElementById('total-q').textContent = all.length;
+  document.getElementById('easy-q').textContent = easy.length;
+  document.getElementById('med-q').textContent = med.length;
+  document.getElementById('hard-q').textContent = hard.length;
+  document.getElementById('prog-txt').textContent = '5 / 5 chapters';
+}
+
+function toggleAnswer(id) {
+  const box = document.getElementById('ans-'+id);
+  const btn = document.getElementById('btn-'+id);
+  if(box.classList.contains('show')) {
+    box.classList.remove('show');
+    btn.textContent = '▶ Show answer';
+  } else {
+    box.classList.add('show');
+    btn.textContent = '▼ Hide answer';
+  }
+}
+
+function render() {
+  const area = document.getElementById('questions-area');
+  area.innerHTML = '';
+  let globalIdx = 0;
+  data.chapters.forEach(ch => {
+    if(activeChapter !== 'all' && activeChapter !== ch.id) return;
+    const filtered = ch.questions.filter(q => activeDiff === 'all' || q.diff === activeDiff);
+    if(filtered.length === 0) return;
+    const sec = document.createElement('div');
+    sec.className = 'chapter-section';
+    const marksTotal = filtered.reduce((s,q)=>s+q.marks,0);
+    sec.innerHTML = `<div class="chapter-title"><span style="font-weight:500">${ch.name}</span><span class="marks-badge">${marksTotal} marks shown</span></div>`;
+    filtered.forEach((q, i) => {
+      const id = ch.id + '_' + i;
+      globalIdx++;
+      sec.innerHTML += `
+        <div class="q-card">
+          <div class="q-meta">
+            <span class="badge type">${q.type}</span>
+            <span class="badge ${q.diff}">${q.diff.charAt(0).toUpperCase()+q.diff.slice(1)}</span>
+            <span class="badge marks">${q.marks} mark${q.marks>1?'s':''}</span>
+          </div>
+          <div class="q-text"><b>Q${globalIdx}.</b> ${q.q}</div>
+          <div class="q-hint" style="color:var(--color-text-secondary)">💡 Hint: ${q.hint}</div>
+          <button class="show-ans-btn" id="btn-${id}" onclick="toggleAnswer('${id}')">▶ Show answer</button>
+          <div class="answer-box" id="ans-${id}">✅ ${q.ans}</div>
+        </div>`;
+    });
+    area.appendChild(sec);
+  });
+  if(area.innerHTML === '') {
+    area.innerHTML = '<div class="no-q">No questions match this filter. Try another level.</div>';
+  }
+}
+
+init();
+</script>
