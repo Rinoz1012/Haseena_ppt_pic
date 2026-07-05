@@ -1,0 +1,343 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .page { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; max-width: 680px; margin: 1rem auto; font-family: var(--font-sans); }
+  .page-header { background: #1F4E79; color: #fff; padding: 10px 18px; display: flex; justify-content: space-between; align-items: center; }
+  .page-header .title { font-size: 14px; font-weight: 500; }
+  .page-header .meta { font-size: 12px; opacity: 0.8; }
+  .page-body { display: grid; grid-template-columns: 1fr 2fr; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-col { padding: 14px 12px; background: var(--color-background-secondary); border-right: 1.5px dashed var(--color-border-secondary); }
+  .main-col { padding: 14px 16px; }
+  .col-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); margin-bottom: 10px; text-transform: uppercase; }
+  .topic-block { margin-bottom: 14px; }
+  .topic-title { font-size: 13px; font-weight: 500; color: #1F4E79; border-left: 3px solid #1F4E79; padding-left: 8px; margin-bottom: 6px; }
+  .note-line { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.6; padding: 2px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .note-line:last-child { border-bottom: none; }
+  .tag { display: inline-block; background: #EBF3FB; color: #1F4E79; font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; margin-right: 4px; }
+  .tag-green { background: #E8F5E9; color: #1B5E20; font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; margin-right: 4px; display: inline-block; }
+  .tag-red { background: #FFEBEE; color: #B71C1C; font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; margin-right: 4px; display: inline-block; }
+  .tag-amber { background: #FFF8E1; color: #854F0B; font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; margin-right: 4px; display: inline-block; }
+  .cue-item { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 10px; line-height: 1.5; padding-bottom: 8px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-item:last-child { border-bottom: none; }
+  .cue-keyword { font-weight: 500; color: var(--color-text-primary); font-size: 12px; display: block; margin-bottom: 2px; }
+  .mnemonic { background: #FFF8E1; border: 0.5px solid #F9A825; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #5D4037; margin-top: 4px; }
+  .alert { background: #FFEBEE; border: 0.5px solid #EF9A9A; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #B71C1C; margin-top: 4px; }
+  .summary-bar { padding: 12px 18px; background: var(--color-background-secondary); border-top: 1.5px solid #1F4E79; }
+  .summary-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); text-transform: uppercase; margin-bottom: 4px; }
+  .summary-text { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.6; }
+  .divider { font-size: 11px; font-weight: 500; background: #EBF3FB; color: #1F4E79; padding: 4px 8px; border-radius: 4px; margin-bottom: 8px; }
+</style>
+
+<div class="page">
+  <div class="page-header">
+    <span class="title">Laxmikanth — Ch 23: Parliament (Final Complete Notes)</span>
+    <span class="meta">Date: 27 Jun 2026 | Page 23</span>
+  </div>
+
+  <div class="page-body">
+    <div class="cue-col">
+      <div class="col-label">Keywords (30%)</div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Art 79 — Organisation</span>
+        Parliament = President + LS + RS = 3 parts! NOT 2!
+        <div class="alert">Most common trap!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Lok Sabha</span>
+        Direct election! Max 552, current 543! 5 years! CAN dissolve! Speaker (IS member)! Min age 25! FPTP!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Rajya Sabha</span>
+        Indirect = MLAs elect! Max 250, current 245! 6 years each! NEVER dissolve! VP=Chairman (NOT member)! Min age 30! 12 nominated!
+        <div class="alert">RS = NEVER dissolved! VP not RS member!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">RS Special Powers</span>
+        Art 249 = State List legislation! Art 312 = New AIS! Only RS initiates! LS cannot!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Speaker</span>
+        Elected by LS = IS LS member! Certifies Money Bill = FINAL! Presides joint sitting! 10th Schedule! Effective majority + 14 days removal!
+        <div class="alert">Speaker IS LS member! VP is NOT RS member!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Pro-tem Speaker</span>
+        Senior most member! Appointed by PRESIDENT! Temporary = before Speaker elected!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Sessions — BMW</span>
+        <div class="mnemonic">Budget (Feb-May) + Monsoon (Jul-Aug) + Winter (Nov-Dec)! Max gap = 6 months! President summons = Cabinet advice! Quorum = 1/10th!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">4 Majorities</span>
+        <div class="mnemonic">Simple = 50%+ present+voting = ordinary!
+Effective = 50%+ TOTAL = Speaker removal!
+Special = 2/3rd present + majority total = CA!
+Special+States = Federal provisions!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Question Hour + Zero Hour</span>
+        QH = 11AM-12! Starred=oral! Unstarred=written! Zero Hour = 12 noon = NOT constitutional = Indian innovation 1962!
+        <div class="alert">Zero Hour = NOT in Constitution!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Money Bill — Art 110</span>
+        LS only! Speaker certifies = FINAL! RS = 14 days = suggest only! President = CANNOT return!
+        <div class="alert">President CANNOT return Money Bill!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Joint Sitting — Art 108</span>
+        Ordinary bills ONLY! Speaker presides! NOT VP! LS wins = more members!
+        <div class="alert">NOT for Money Bill + CA Bill!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">No Confidence Motion</span>
+        LS only! 50 members needed! Simple majority = government FALLS! Art 75(3)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Anti-defection — 10th Schedule</span>
+        52nd Amendment 1985! Votes against whip = disqualified! Exception = 2/3rd merger! Kihoto Hollohan 1992 = judicial review!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Leader of Opposition</span>
+        10% seats minimum! STATUTORY = Salary Act 1977! NOT constitutional! 2014-2019 = vacant!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Parliamentary Privileges — Art 105</span>
+        Freedom of speech = no court! Freedom from arrest = civil = 40 days! Criminal = CAN arrest! Art 122 = courts cannot inquire!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Parliamentary Sovereignty</span>
+        India = NO absolute sovereignty! LIMITED by Constitution + FR + Judicial Review + Federalism! Unlike UK = absolute!
+        <div class="alert">India = Constitutional supremacy NOT Parliamentary!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Multifunctional Role</span>
+        <div class="mnemonic">LECFEJD =
+L = Legislative
+E = Executive
+C = Constitutional
+F = Financial
+E = Electoral
+J = Judicial
+D = Deliberative</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Ineffectiveness</span>
+        Whip + Ordinance + workload + disruptions + delegated legislation + Money Bill misuse!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">PAC</span>
+        Public Accounts Committee! Oldest! Examines CAG report! Chaired by OPPOSITION!
+        <div class="alert">PAC = Opposition chairs!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">PYQ Alert</span>
+        <div class="alert">Parliament = 3 parts! RS never dissolved! Speaker presides joint sitting! Zero Hour = NOT constitutional! President cannot return Money Bill! PAC = opposition! LOP = statutory! India = NO parliamentary sovereignty!</div>
+      </div>
+
+    </div>
+
+    <div class="main-col">
+      <div class="col-label">Main Notes (70%)</div>
+
+      <div class="divider">A — Organisation + Composition + Election</div>
+
+      <div class="topic-block">
+        <div class="topic-title">Organisation — Art 79</div>
+        <div class="note-line"><span class="tag">Art 79</span> Parliament = President + Lok Sabha + Rajya Sabha = 3 parts!</div>
+        <div class="note-line">Supreme legislative body of India! Makes laws for whole country!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Lok Sabha</div>
+        <div class="note-line">House of People! Direct election = Universal Adult Franchise = 18+! FPTP system!</div>
+        <div class="note-line">Max 552! Current = 543! Min age = 25 years! Term = 5 years!</div>
+        <div class="note-line">CAN be dissolved by President on PM's advice!</div>
+        <div class="note-line">104th Amendment 2020 = abolished Anglo-Indian nominated seats!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Rajya Sabha</div>
+        <div class="note-line">Council of States! Indirect = elected by MLAs = STV = proportional representation!</div>
+        <div class="note-line">Max 250! Current = 245! Min age = 30 years! 6 year term! 1/3rd retire every 2 years!</div>
+        <div class="note-line"><span class="tag-red">NEVER dissolved!</span> Permanent House!</div>
+        <div class="note-line">12 nominated by President = Art + Science + Literature + Social Service!</div>
+        <div class="note-line">Special powers = Art 249 (State List) + Art 312 (New AIS) = RS only!</div>
+      </div>
+
+      <div class="divider">B — Presiding Officers + Leaders</div>
+
+      <div class="topic-block">
+        <div class="topic-title">Speaker + Deputy Speaker</div>
+        <div class="note-line">Speaker = elected by LS = from LS members = IS LS member!</div>
+        <div class="note-line">Pro-tem Speaker = senior most member = appointed by PRESIDENT = temporary!</div>
+        <div class="note-line">Powers = certifies Money Bill (FINAL!) + presides joint sitting + 10th Schedule decisions!</div>
+        <div class="note-line">Removal = effective majority + 14 days notice = vacates chair during debate!</div>
+        <div class="note-line">Panel of Chairpersons = 6 members = nominated by Speaker = backup!</div>
+        <div class="note-line">Deputy Speaker = elected by LS = presides when Speaker absent!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">RS Chairman + Deputy Chairman</div>
+        <div class="note-line">Chairman = VP = ex-officio = NOT RS member! Only casting vote!</div>
+        <div class="note-line">Removal = RS simple majority + LS agrees + 14 days!</div>
+        <div class="note-line">Deputy Chairman = elected by RS = IS RS member = presides when VP absent!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Leaders + Whip</div>
+        <div class="note-line">Leader of House = PM (if LS member) OR nominated senior minister!</div>
+        <div class="note-line">Leader of Opposition = largest opposition = min 10% seats = STATUTORY (Salary Act 1977)!</div>
+        <div class="note-line">2014-2019 = no LOP! 2024 = Rahul Gandhi = LOP!</div>
+        <div class="note-line">Whip = party discipline = 3 types = Three line = must attend + vote as directed!</div>
+        <div class="note-line">Whip = extra constitutional! Violation = anti-defection may apply!</div>
+      </div>
+
+      <div class="divider">C — Sessions + Majority</div>
+
+      <div class="topic-block">
+        <div class="topic-title">Sessions + Sittings</div>
+        <div class="note-line">President summons = on Cabinet's advice = no discretion!</div>
+        <div class="note-line">3 sessions = Budget (Feb-May) + Monsoon (Jul-Aug) + Winter (Nov-Dec)!</div>
+        <div class="note-line">Max gap = 6 months! At least 2 sessions per year! Quorum = 1/10th!</div>
+        <div class="note-line">Adjournment = Speaker! Prorogation = President! Dissolution = President (LS only)!</div>
+        <div class="note-line">Language = Art 120 = Hindi + English official = 22 scheduled languages allowed!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Types of Majority</div>
+        <div class="note-line"><span class="tag">Simple</span> 50%+ present + voting = ordinary bills!</div>
+        <div class="note-line"><span class="tag">Effective</span> 50%+ TOTAL membership = Speaker/Deputy Speaker removal!</div>
+        <div class="note-line"><span class="tag">Special</span> 2/3rd present+voting AND majority of total = Constitutional Amendment!</div>
+        <div class="note-line"><span class="tag">Special+States</span> Special majority + 50% state legislatures = federal provisions!</div>
+      </div>
+
+      <div class="divider">D — Devices + Legislative Procedure</div>
+
+      <div class="topic-block">
+        <div class="topic-title">Devices of Parliamentary Proceedings</div>
+        <div class="note-line">Question Hour = 11AM-12! Starred=oral+supplementary! Unstarred=written only!</div>
+        <div class="note-line"><span class="tag-amber">Zero Hour</span> = 12 noon = NOT constitutional = NOT in rules = Indian innovation 1962!</div>
+        <div class="note-line">Calling Attention = MP calls minister = statement = no voting = Indian innovation!</div>
+        <div class="note-line">Adjournment Motion = urgent matter = 50 members = voting at end = rare!</div>
+        <div class="note-line">No Confidence = LS only = 50 members = simple majority = government FALLS! Art 75(3)!</div>
+        <div class="note-line">Censure = specific minister only! Cut Motion = budget = 3 types!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Legislative Procedure + Bills</div>
+        <div class="note-line">Ordinary Bill = either House = 3 readings = committee stage!</div>
+        <div class="note-line">Money Bill (Art 110) = LS only = Speaker certifies = RS 14 days suggest only!</div>
+        <div class="note-line">President = CANNOT return Money Bill = only assent or withhold!</div>
+        <div class="note-line">Financial Bill A = LS only = like Money Bill! Financial Bill B = either House!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Joint Sitting — Art 108</div>
+        <div class="note-line">When = RS rejects + amends + keeps pending 6 months!</div>
+        <div class="note-line">President calls! Speaker presides! NOT VP!</div>
+        <div class="note-line">Only ordinary bills! NOT Money Bill! NOT Constitutional Amendment!</div>
+        <div class="note-line">Simple majority = LS usually wins = more members (543 vs 245)!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Budget — Art 112</div>
+        <div class="note-line">Annual Financial Statement = presented by FM in LS!</div>
+        <div class="note-line">Vote on Account = interim = 2 months expenditure!</div>
+        <div class="note-line">Consolidated Fund = all revenue! Contingency Fund = emergencies (President)!</div>
+      </div>
+
+      <div class="divider">E — Multifunctional Role + Ineffectiveness</div>
+
+      <div class="topic-block">
+        <div class="topic-title">Multifunctional Role of Parliament — LECFEJD</div>
+        <div class="note-line"><span class="tag">Legislative</span> Makes laws = Union List + Concurrent List!</div>
+        <div class="note-line"><span class="tag">Executive</span> Controls government = Question Hour + No Confidence!</div>
+        <div class="note-line"><span class="tag">Constitutional</span> Amends Constitution = Art 368!</div>
+        <div class="note-line"><span class="tag">Financial</span> Controls budget = no tax without Parliament!</div>
+        <div class="note-line"><span class="tag">Electoral</span> Elects President + Vice President!</div>
+        <div class="note-line"><span class="tag">Judicial</span> Impeaches President + removes judges + breach of privilege!</div>
+        <div class="note-line"><span class="tag">Deliberative</span> Debates national issues = ventilation of grievances!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Ineffectiveness of Parliamentary Control</div>
+        <div class="note-line">Whip system = MPs must vote with party = no independent judgment!</div>
+        <div class="note-line">Huge workload = insufficient time = bills passed without scrutiny!</div>
+        <div class="note-line">Technical complexity = MPs lack expertise = rubber stamp!</div>
+        <div class="note-line">Ordinance = bypasses Parliament = government legislates without Parliament!</div>
+        <div class="note-line">Delegated legislation = too much power to executive = Parliament bypassed!</div>
+        <div class="note-line">Disruptions = Parliament = often not functioning = low productive days!</div>
+        <div class="note-line">Money Bill misuse = controversial bills = passed as Money Bills = RS bypassed!</div>
+      </div>
+
+      <div class="divider">F — RS Position + Privileges + Sovereignty</div>
+
+      <div class="topic-block">
+        <div class="topic-title">Position of Rajya Sabha</div>
+        <div class="note-line">Less powerful = Money Bill + No Confidence + Joint sitting = LS wins!</div>
+        <div class="note-line">Special powers = Art 249 (State List) + Art 312 (New AIS) = RS ONLY!</div>
+        <div class="note-line">Permanent = always functions even when LS dissolved!</div>
+        <div class="note-line">Represents states = federal balance = protects state interests!</div>
+        <div class="note-line">12 nominated = eminent persons = quality of debate = high!</div>
+        <div class="note-line">6 year term = long term perspective = not worried about elections!</div>
+        <div class="note-line">Revising chamber = sober second thought = checks LS bills!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Parliamentary Privileges — Art 105</div>
+        <div class="note-line">Freedom of speech = complete immunity = no court action for Parliament speech!</div>
+        <div class="note-line">Freedom from arrest = civil cases = session + 40 days before + after!</div>
+        <div class="note-line">Criminal cases = CAN be arrested even during session!</div>
+        <div class="note-line">Art 122 = courts cannot inquire into parliamentary proceedings!</div>
+        <div class="note-line">Breach of privilege = Parliament = its own judge!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Parliamentary Sovereignty</div>
+        <div class="note-line">UK = absolute sovereignty = Parliament supreme = any law = no court can question!</div>
+        <div class="note-line">India = NO absolute sovereignty = LIMITED!</div>
+        <div class="note-line">Limited by = Written Constitution + Fundamental Rights + Judicial Review + Federalism!</div>
+        <div class="note-line">SC = can strike down Parliament's laws if violates Constitution!</div>
+        <div class="note-line">India = Constitutional supremacy NOT Parliamentary supremacy!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Anti-Defection + PAC</div>
+        <div class="note-line">10th Schedule = 52nd Amendment 1985! Disqualified = votes against whip + leaves party!</div>
+        <div class="note-line">Exception = 2/3rd merger! Speaker decides LS! Chairman decides RS!</div>
+        <div class="note-line">Kihoto Hollohan 1992 = judicial review allowed!</div>
+        <div class="note-line"><span class="tag">PAC</span> Public Accounts Committee = oldest = examines CAG = chaired by OPPOSITION!</div>
+        <div class="note-line">Estimates Committee = examines budget = only LS members!</div>
+        <div class="note-line">Lame Duck = outgoing Parliament = convention = routine work only = NOT in Constitution!</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="summary-bar">
+    <div class="summary-label">Summary — Ch 23 Parliament (Complete Final)</div>
+    <div class="summary-text">Parliament = President+LS+RS (Art 79 = 3 parts!). LS = direct, 543, 25yrs, 5yr, dissolve, Speaker (IS member), FPTP. RS = indirect MLAs, 245, 30yrs, 6yr, NEVER dissolve, VP=Chairman (NOT member), 12 nominated, Art249+312 special powers. Speaker = certifies Money Bill (final!) + presides joint sitting + 10th Schedule. Sessions = BMW, max 6 month gap, quorum 1/10th. Majority = Simple+Effective+Special+Special+States. Devices = QHour(starred/unstarred)+ZeroHour(NOT constitutional)+NoConfidence(LS only, 50 members). Money Bill = LS only, Speaker certifies, RS suggests, President cannot return. Joint sitting (Art 108) = ordinary bills only, Speaker presides. Parliament = 7 functions (LECFEJD). Ineffective = Whip+Ordinance+workload+disruptions. RS = less powerful but important = permanent+federal+Art249+312. India = Constitutional supremacy NOT Parliamentary sovereignty unlike UK!</div>
+  </div>
+</div>
