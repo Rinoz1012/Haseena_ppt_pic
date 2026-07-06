@@ -1,0 +1,139 @@
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .page { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; max-width: 680px; margin: 1rem auto; font-family: var(--font-sans); }
+  .page-header { background: #1F4E79; color: #fff; padding: 10px 18px; display: flex; justify-content: space-between; align-items: center; }
+  .page-header .title { font-size: 14px; font-weight: 500; }
+  .page-header .meta { font-size: 12px; opacity: 0.8; }
+  .page-body { display: grid; grid-template-columns: 1fr 2fr; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-col { padding: 14px 12px; background: var(--color-background-secondary); border-right: 1.5px dashed var(--color-border-secondary); }
+  .main-col { padding: 14px 16px; }
+  .col-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); margin-bottom: 10px; text-transform: uppercase; }
+  .topic-block { margin-bottom: 10px; }
+  .topic-title { font-size: 13px; font-weight: 500; color: #1F4E79; border-left: 3px solid #1F4E79; padding-left: 8px; margin-bottom: 4px; }
+  .note-line { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.55; padding: 2px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .note-line:last-child { border-bottom: none; }
+  .tag { display: inline-block; background: #EBF3FB; color: #1F4E79; font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; margin-right: 4px; }
+  .cue-item { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px; line-height: 1.5; padding-bottom: 6px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-item:last-child { border-bottom: none; }
+  .cue-keyword { font-weight: 500; color: var(--color-text-primary); font-size: 12px; display: block; margin-bottom: 2px; }
+  .mnemonic { background: #FFF8E1; border: 0.5px solid #F9A825; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #5D4037; margin-top: 4px; }
+  .alert { background: #FFEBEE; border: 0.5px solid #EF9A9A; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #B71C1C; margin-top: 4px; }
+  .summary-bar { padding: 12px 18px; background: var(--color-background-secondary); border-top: 1.5px solid #1F4E79; }
+  .summary-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); text-transform: uppercase; margin-bottom: 4px; }
+  .summary-text { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.6; }
+  .divider { font-size: 11px; font-weight: 500; background: #EBF3FB; color: #1F4E79; padding: 4px 8px; border-radius: 4px; margin-bottom: 8px; }
+</style>
+
+<div class="page">
+  <div class="page-header">
+    <span class="title">Municipalities — Cornell Notes (Revision Edition)</span>
+    <span class="meta">06 Jul 2026</span>
+  </div>
+
+  <div class="page-body">
+    <div class="cue-col">
+      <div class="col-label">Keywords</div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Evolution</span>
+        Madras Corp 1687=oldest! Lord Ripon 1882="Magna Carta"! GoI Act 1919/1935=provincial subject! 74th Amdt 1992=const. status!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">74th Amdt</span>
+        Part IX-A! Art 243P-243ZG! 12th Schedule=18 subjects! Force 1 Jun 1993!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">243Q Types</span>
+        Nagar Panchayat(transitional) / Municipal Council(smaller) / Municipal Corporation(larger)! Governor decides!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Unique Features</span>
+        Wards Cttee(243S, pop&gt;3L) + Metropolitan Planning Cttee(243ZE, pop&gt;10L)!
+        <div class="alert">Not present in Panchayati Raj!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">8 Types Urban Govt</span>
+        <div class="mnemonic">Corporation, Municipality, Notified Area Cttee, Town Area Cttee, Cantonment Board, Township, Port Trust, Special Purpose Agency</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Personnel</span>
+        Mayor=ceremonial! Municipal Commissioner=real executive, state-appointed!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Revenue</span>
+        Property tax(main) + non-tax(user charges/fees) + SFC/Union FC grants! Octroi mostly abolished!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Central Council</span>
+        Est 1954, renamed 1985! Chairman=Union Minister(Housing&Urban Affairs)! ADVISORY only!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">PYQ Alert</span>
+        <div class="alert">74th Amdt=12th Schedule(NOT 11th)! Notified Area Cttee=fully nominated! Same SEC+SFC serve both panchayats & municipalities!</div>
+      </div>
+    </div>
+
+    <div class="main-col">
+      <div class="col-label">Main Notes</div>
+
+      <div class="divider">Evolution</div>
+      <div class="topic-block">
+        <div class="note-line">Madras Municipal Corporation (1687) = oldest; Bombay & Calcutta corporations (1726)!</div>
+        <div class="note-line">Lord Ripon's Resolution (1882) = "Magna Carta of Local Self-Government"!</div>
+        <div class="note-line">GoI Act 1919 (dyarchy, transferred subject) → GoI Act 1935 (provincial autonomy)!</div>
+        <div class="note-line">74th Amendment Act 1992 (force 1 Jun 1993) finally gave constitutional status!</div>
+      </div>
+
+      <div class="divider">74th Amendment Act</div>
+      <div class="topic-block">
+        <div class="note-line">Part IX-A (243P-243ZG) + 12th Schedule (18 subjects)!</div>
+        <div class="note-line">243Q = 3 types (Nagar Panchayat/Council/Corporation) based on population, density, revenue, non-agri employment — Governor decides!</div>
+        <div class="note-line">243T = reservation SC/ST + women ≥1/3 including chairperson seats!</div>
+        <div class="note-line">243S Wards Committee (mandatory pop&gt;3 lakh) & 243ZE Metropolitan Planning Committee (mandatory pop&gt;10 lakh) — unique to municipalities!</div>
+        <div class="note-line">Same SEC (243ZA) and SFC (243Y) as panchayats!</div>
+      </div>
+
+      <div class="divider">Types of Urban Government</div>
+      <div class="topic-block">
+        <div class="note-line">Municipal Corporation (large cities, Mayor+Commissioner) | Municipality/Council (smaller towns)!</div>
+        <div class="note-line">Notified Area Committee (fast-growing town, entirely NOMINATED) | Town Area Committee (small town, limited functions)!</div>
+        <div class="note-line">Cantonment Board (Defence Ministry, Cantonments Act 2006) | Township (PSU-run) | Port Trust | Special Purpose Agency (parastatal, e.g. Development Authority)!</div>
+      </div>
+
+      <div class="divider">Municipal Personnel</div>
+      <div class="topic-block">
+        <div class="note-line">Mayor = ceremonial head, short term (~1yr, varies by state)!</div>
+        <div class="note-line">Municipal Commissioner = real executive authority, state-appointed (IAS/state service)!</div>
+        <div class="note-line">CEO system for smaller municipalities; Commissioner system for corporations!</div>
+      </div>
+
+      <div class="divider">Municipal Revenue</div>
+      <div class="topic-block">
+        <div class="note-line">Tax: property tax (main), profession tax, advertisement tax, entertainment tax!</div>
+        <div class="note-line">Non-tax: user charges, license fees, rent from property!</div>
+        <div class="note-line">Grants: SFC + Union Finance Commission (Art 280)! Octroi largely abolished post-GST, causing fund crunch!</div>
+      </div>
+
+      <div class="divider">Central Council of Local Government</div>
+      <div class="topic-block">
+        <div class="note-line">Established 1954, renamed 1985 as "Central Council of Local Government and Urban Development"!</div>
+        <div class="note-line">Chairman = Union Minister (Housing & Urban Affairs); members = state urban development ministers!</div>
+        <div class="note-line">Purely advisory body under Art 263 — reforms proposals, best practice exchange!</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="summary-bar">
+    <div class="summary-label">Summary</div>
+    <div class="summary-text">Evolution: Madras Corp 1687 → Lord Ripon 1882 → GoI Acts 1919/1935 → 74th Amendment 1992 (force 1993) = Part IX-A + 12th Schedule (18 subjects). 3 types via 243Q; unique features = Wards Committee (pop&gt;3L) & Metropolitan Planning Committee (pop&gt;10L). 8 types of urban govt incl. Corporation, Council, Notified/Town Area Committees, Cantonment Board, Township, Port Trust, Special Purpose Agency. Mayor=ceremonial, Commissioner=real executive. Revenue = property tax + non-tax + SFC/Union FC grants, octroi abolished. Central Council of Local Government (1954/1985) = advisory apex body under Union Housing Minister.</div>
+  </div>
+</div>
