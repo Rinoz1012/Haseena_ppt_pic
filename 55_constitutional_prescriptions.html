@@ -1,0 +1,168 @@
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .page { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; max-width: 680px; margin: 1rem auto; font-family: var(--font-sans); }
+  .page-header { background: #1F4E79; color: #fff; padding: 10px 18px; display: flex; justify-content: space-between; align-items: center; }
+  .page-header .title { font-size: 14px; font-weight: 500; }
+  .page-header .meta { font-size: 12px; opacity: 0.8; }
+  .page-body { display: grid; grid-template-columns: 1fr 2fr; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-col { padding: 14px 12px; background: var(--color-background-secondary); border-right: 1.5px dashed var(--color-border-secondary); }
+  .main-col { padding: 14px 16px; }
+  .col-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); margin-bottom: 10px; text-transform: uppercase; }
+  .topic-block { margin-bottom: 10px; }
+  .topic-title { font-size: 13px; font-weight: 500; color: #1F4E79; border-left: 3px solid #1F4E79; padding-left: 8px; margin-bottom: 4px; }
+  .note-line { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.55; padding: 2px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .note-line:last-child { border-bottom: none; }
+  .tag { display: inline-block; background: #EBF3FB; color: #1F4E79; font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; margin-right: 4px; }
+  .cue-item { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px; line-height: 1.5; padding-bottom: 6px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-item:last-child { border-bottom: none; }
+  .cue-keyword { font-weight: 500; color: var(--color-text-primary); font-size: 12px; display: block; margin-bottom: 2px; }
+  .mnemonic { background: #FFF8E1; border: 0.5px solid #F9A825; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #5D4037; margin-top: 4px; }
+  .alert { background: #FFEBEE; border: 0.5px solid #EF9A9A; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #B71C1C; margin-top: 4px; }
+  .summary-bar { padding: 12px 18px; background: var(--color-background-secondary); border-top: 1.5px solid #1F4E79; }
+  .summary-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); text-transform: uppercase; margin-bottom: 4px; }
+  .summary-text { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.6; }
+  .divider { font-size: 11px; font-weight: 500; background: #EBF3FB; color: #1F4E79; padding: 4px 8px; border-radius: 4px; margin-bottom: 8px; }
+</style>
+
+<div class="page">
+  <div class="page-header">
+    <span class="title">55. Constitutional Prescriptions — Comparative Cornell Notes</span>
+    <span class="meta">06 Jul 2026</span>
+  </div>
+
+  <div class="page-body">
+    <div class="cue-col">
+      <div class="col-label">Keywords</div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Appointing Authority</span>
+        President: EC, UPSC, FC, GST Council(via), NCSC, NCST, NCBC, Linguistic Comm., CAG, AG!
+        SPSC/Advocate General = GOVERNOR!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Age Qualification</span>
+        AG=SC judge qualified! Advocate General=HC judge qualified! Others = no specific "age" bar, but retire at 65 (EC, UPSC/SPSC, CAG)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Oath</span>
+        Most constitutional functionaries take oath before assuming office (specifics vary)! AG/Advocate General = no separate constitutional oath format prescribed!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Term Pattern</span>
+        <div class="mnemonic">6yrs/65yrs = EC, UPSC, SPSC, CAG (FIXED-term bodies)
+No fixed term = AG, Advocate General (pleasure of President/Governor)
+5 yrs (or earlier) = Finance Commission</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Removal Pattern</span>
+        Like SC judge (impeachment) = CEC, CAG! On CEC's recommendation = other ECs! By President after SC inquiry (misbehaviour) = UPSC/SPSC! At pleasure = AG/Advocate General (NOT "removal", simply withdrawal of pleasure)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Salary Charged On</span>
+        Consolidated Fund of INDIA = EC, UPSC, CAG! Consolidated Fund of STATE = SPSC! AG/Advocate General = determined by President/Governor, not fixed in Constitution!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Resignation</span>
+        All can resign by writing to appointing authority (President/Governor)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Reports to Parliament</span>
+        <div class="mnemonic">President→Parliament: EC(indirectly via elections), UPSC, FC, NCSC, NCST, NCBC, Linguistic Comm., CAG
+Governor→State Legislature: SPSC, CAG(state portion)</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Dissolution — N/A here</span>
+        Most of these bodies are PERMANENT, not subject to "dissolution" like Houses of Parliament! Finance Commission is reconstituted every 5 yrs (not "dissolved")!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">PYQ Alert</span>
+        <div class="alert">AG/Advocate General = pleasure-tenure, no fixed term, no SC-judge-style removal process! Most others = fixed term + structured removal!</div>
+      </div>
+    </div>
+
+    <div class="main-col">
+      <div class="col-label">Main Notes — Comparison Across Bodies</div>
+
+      <div class="divider">Composition</div>
+      <div class="topic-block">
+        <div class="note-line"><span class="tag">Multi-member</span> Election Commission (CEC+ECs), UPSC/SPSC (Chairman+members), Finance Commission (Chairman+4), GST Council (FM+state ministers), NCSC/NCST/NCBC (Chairperson+VC+3 members)!</div>
+        <div class="note-line"><span class="tag">Single-officer</span> CAG, Attorney General, Advocate General, Special Officer for Linguistic Minorities!</div>
+      </div>
+
+      <div class="divider">Appointments</div>
+      <div class="topic-block">
+        <div class="note-line">By PRESIDENT: Election Commission, UPSC, Finance Commission, NCSC, NCST, NCBC, Linguistic Minorities Commissioner, CAG, Attorney General!</div>
+        <div class="note-line">By GOVERNOR: SPSC members, Advocate General of State!</div>
+        <div class="note-line">GST Council — not "appointed" as individuals; constituted by President, but composed of sitting Finance Ministers (ex-officio)!</div>
+      </div>
+
+      <div class="divider">Age</div>
+      <div class="topic-block">
+        <div class="note-line">Retirement age of 65 applies to: CEC/ECs, UPSC/SPSC members, CAG!</div>
+        <div class="note-line">Attorney General must qualify to be a SC judge; Advocate General must qualify to be a HC judge — these are qualification thresholds, not retirement ages!</div>
+        <div class="note-line">NCSC/NCST/NCBC members — no specific constitutional age limit; tenure/conditions set by President through rules!</div>
+      </div>
+
+      <div class="divider">Oaths</div>
+      <div class="topic-block">
+        <div class="note-line">Most high constitutional functionaries subscribe to an oath/affirmation of office (format & administering authority vary by body/statute)!</div>
+        <div class="note-line">Attorney General and Advocate General do not have a separately prescribed constitutional oath format like the President, Governor, or judges!</div>
+      </div>
+
+      <div class="divider">Term</div>
+      <div class="topic-block">
+        <div class="note-line">Fixed 6 years/65 years (whichever earlier) — Election Commission, UPSC, SPSC, CAG!</div>
+        <div class="note-line">Finance Commission — reconstituted every 5 years, or earlier if the President considers necessary!</div>
+        <div class="note-line">Attorney General & Advocate General — NO fixed term; hold office at the pleasure of the President/Governor respectively!</div>
+      </div>
+
+      <div class="divider">Salaries</div>
+      <div class="topic-block">
+        <div class="note-line">Charged on the Consolidated Fund of India (non-votable) — Election Commission, UPSC, CAG!</div>
+        <div class="note-line">Charged on the Consolidated Fund of the State — SPSC!</div>
+        <div class="note-line">Attorney General/Advocate General remuneration — determined by the President/Governor respectively, not fixed by the Constitution itself!</div>
+      </div>
+
+      <div class="divider">Resignations</div>
+      <div class="topic-block">
+        <div class="note-line">All these functionaries may resign by addressing a resignation letter to their respective appointing authority (President or Governor)!</div>
+      </div>
+
+      <div class="divider">Removals</div>
+      <div class="topic-block">
+        <div class="note-line">Like a Supreme Court judge (impeachment process) — CEC, CAG!</div>
+        <div class="note-line">Other Election Commissioners — removed by President only on CEC's recommendation!</div>
+        <div class="note-line">UPSC/SPSC members — removed by President; misbehaviour ground needs a Supreme Court inquiry, other grounds (insolvency, outside paid job, infirmity) allow direct removal!</div>
+        <div class="note-line">Attorney General/Advocate General — hold office at pleasure; ending their tenure is a withdrawal of pleasure, not a formal "removal" process!</div>
+      </div>
+
+      <div class="divider">Dissolutions</div>
+      <div class="topic-block">
+        <div class="note-line">These are largely PERMANENT constitutional bodies/offices — "dissolution" in the sense applicable to legislative Houses does not apply!</div>
+        <div class="note-line">Finance Commission is periodically reconstituted (every 5 years) rather than dissolved!</div>
+      </div>
+
+      <div class="divider">Submission of Reports</div>
+      <div class="topic-block">
+        <div class="note-line">President-routed reports, laid before Parliament: UPSC, Finance Commission, NCSC, NCST, NCBC, Special Officer for Linguistic Minorities, CAG (Union accounts)!</div>
+        <div class="note-line">Governor-routed reports, laid before State Legislature: SPSC, CAG (State accounts portion)!</div>
+        <div class="note-line">Attorney General/Advocate General do not submit periodic constitutional reports — their role is advisory/representational, not report-based!</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="summary-bar">
+    <div class="summary-label">Summary</div>
+    <div class="summary-text">Across constitutional bodies: appointment authority is mostly the President (EC, UPSC, FC, NCSC/NCST/NCBC, Linguistic Commissioner, CAG, AG), except SPSC and Advocate General (Governor). Fixed 6yr/65yr terms apply to EC, UPSC, SPSC, CAG; Finance Commission is reconstituted every 5 years; AG and Advocate General instead serve at the pleasure of their appointing authority with no fixed term. Removal is structured (SC-judge-style impeachment for CEC/CAG; SC-inquiry-based for UPSC/SPSC misbehaviour) for most bodies, but is a simple "pleasure withdrawal" for AG/Advocate General. Salaries are charged on the Consolidated Fund of India (Union bodies) or of the State (SPSC), while AG/Advocate General remuneration is discretionary. Reports flow President→Parliament or Governor→State Legislature for most bodies, but AG/Advocate General have no report-submission role since they function as legal advisors, not oversight bodies. Most of these bodies are permanent and not subject to "dissolution."</div>
+  </div>
+</div>
