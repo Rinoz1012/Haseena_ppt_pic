@@ -1,0 +1,181 @@
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .page { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; max-width: 700px; margin: 1rem auto; font-family: var(--font-sans); }
+  .page-header { background: #1F4E79; color: #fff; padding: 10px 18px; display: flex; justify-content: space-between; align-items: center; }
+  .page-header .title { font-size: 14px; font-weight: 500; }
+  .page-header .meta { font-size: 12px; opacity: 0.8; }
+  .page-body { display: grid; grid-template-columns: 1fr 2fr; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-col { padding: 14px 12px; background: var(--color-background-secondary); border-right: 1.5px dashed var(--color-border-secondary); }
+  .main-col { padding: 14px 16px; }
+  .col-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); margin-bottom: 10px; text-transform: uppercase; }
+  .topic-block { margin-bottom: 9px; }
+  .topic-title { font-size: 12.5px; font-weight: 500; color: #1F4E79; border-left: 3px solid #1F4E79; padding-left: 8px; margin-bottom: 3px; }
+  .note-line { font-size: 12px; color: var(--color-text-primary); line-height: 1.5; padding: 1px 0; }
+  .cue-item { font-size: 11.5px; color: var(--color-text-secondary); margin-bottom: 6px; line-height: 1.45; padding-bottom: 5px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-item:last-child { border-bottom: none; }
+  .cue-keyword { font-weight: 500; color: var(--color-text-primary); font-size: 12px; display: block; margin-bottom: 1px; }
+  .alert { background: #FFEBEE; border: 0.5px solid #EF9A9A; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #B71C1C; margin-top: 4px; }
+  .summary-bar { padding: 12px 18px; background: var(--color-background-secondary); border-top: 1.5px solid #1F4E79; }
+  .summary-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); text-transform: uppercase; margin-bottom: 4px; }
+  .summary-text { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.6; }
+</style>
+
+<div class="page">
+  <div class="page-header">
+    <span class="title">92. World Constitutions — Cornell Notes</span>
+    <span class="meta">06 Jul 2026</span>
+  </div>
+
+  <div class="page-body">
+    <div class="cue-col">
+      <div class="col-label">Keywords</div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">American Constitution</span>
+        Written, SHORTEST national constitution, RIGID, FEDERAL, Presidential system, strict separation of powers, bicameral(Senate+House), DUAL citizenship, Bill of Rights(first 10 Amdts)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">American President</span>
+        Head of state+govt COMBINED! Elected via ELECTORAL COLLEGE(indirect)! 4-yr term, MAX 2 terms(22nd Amdt)! NOT responsible to Congress! Cabinet=advisory ONLY, no collective responsibility!
+        <div class="alert">US President ≠ removable by no-confidence vote — fixed term, unlike PM in parliamentary systems!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">British Constitution</span>
+        UNWRITTEN(uncodified), FLEXIBLE, UNITARY, evolved over centuries! PARLIAMENTARY SOVEREIGNTY(absolute — no judicial review of Acts)! Conventions play major role! Fusion of powers(not separation)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">British Cabinet</span>
+        Real executive! PM=primus inter pares("first among equals")! COLLECTIVE RESPONSIBILITY! Drawn from majority party in Commons! Secrecy of Cabinet proceedings!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">French Constitution</span>
+        SEMI-PRESIDENTIAL/dual executive(President+PM both have real power)! 5th Republic Constitution(1958)! "Cohabitation" possible(President+PM from different parties)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">French President</span>
+        DIRECTLY elected(since 1962)! 5-year term(since 2000, was 7 yrs before)! Strong powers — can DISSOLVE National Assembly, emergency powers(Art 16)! PM handles domestic affairs, accountable to Assembly!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Japanese Constitution</span>
+        1947 "Postwar Constitution"! Emperor=SYMBOLIC head, NO real power! PM=real executive(Parliamentary system)! Art 9=PACIFIST clause(renounces war/war-making forces)! Bicameral DIET!
+        <div class="alert">Article 9 = Japan's unique war-renunciation clause, frequently tested!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Soviet Constitution</span>
+        1936(Stalin) + 1977(Brezhnev) constitutions! SINGLE-PARTY state(Communist Party)! Supreme Soviet=legislature(nominal)! Federal in FORM, unitary in PRACTICE(CPSU control)! USSR dissolved 1991!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Russian Constitution</span>
+        1993 Constitution(post-Soviet)! SEMI-PRESIDENTIAL! President=very powerful, directly elected, 6-yr term(since 2008 amdt)! PM heads govt but SUBORDINATE to President! Bicameral Federal Assembly(State Duma+Federation Council)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Chinese Constitution</span>
+        Current 1982 Constitution(amended several times)! SINGLE-PARTY state(CPC leads)! National People's Congress(NPC)=nominal supreme organ, REAL power with CPC/President! UNITARY state!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Swiss Constitution</span>
+        FEDERAL! Strong DIRECT DEMOCRACY(referendum+initiative)! COLLEGIAL executive=Federal Council(7 members, collective headship)! Rotating CEREMONIAL President(1-yr term)! Neutrality tradition!
+        <div class="alert">Switzerland = only major country with a truly COLLEGIAL(7-member) executive head, not single President/PM!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">PYQ Alert</span>
+        <div class="alert">US=dual citizenship, India=single! UK=Parliamentary sovereignty(no judicial review of Acts), India=Constitutional supremacy(judicial review exists)! France=semi-presidential(dual executive)! Switzerland=collegial 7-member executive, unique globally!</div>
+      </div>
+    </div>
+
+    <div class="main-col">
+      <div class="col-label">Main Notes</div>
+
+      <div class="topic-block">
+        <div class="topic-title">American Constitution</div>
+        <div class="note-line">The US Constitution is a written, codified document — the shortest national constitution in the world — and is rigid, requiring a special amendment procedure!</div>
+        <div class="note-line">It establishes a federal structure with a presidential system of government, based on a strict separation of powers among the executive, legislature, and judiciary!</div>
+        <div class="note-line">The legislature (Congress) is bicameral, comprising the Senate and the House of Representatives; American citizens hold dual citizenship (federal and state), unlike India's single citizenship!</div>
+        <div class="note-line">The first 10 amendments constitute the Bill of Rights, protecting fundamental civil liberties!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">American President</div>
+        <div class="note-line">The US President combines the roles of head of state and head of government, unlike India's split between the President (head of state) and PM (head of government)!</div>
+        <div class="note-line">Elected indirectly through the Electoral College system, for a 4-year term, with a maximum of two terms permitted under the 22nd Amendment!</div>
+        <div class="note-line">The President is not responsible to Congress and cannot be removed through a no-confidence vote — the Cabinet serves purely in an advisory capacity, with no principle of collective responsibility as seen in parliamentary systems!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">British Constitution</div>
+        <div class="note-line">The British Constitution is unwritten (uncodified) and flexible, having evolved gradually over centuries rather than being drafted at a single point in time!</div>
+        <div class="note-line">It establishes a unitary state, and is founded on the principle of Parliamentary sovereignty — Parliament's laws cannot be struck down by courts through judicial review, unlike in India!</div>
+        <div class="note-line">Constitutional conventions play a significant role in governing the practical functioning of the British system, and it follows a fusion (rather than separation) of powers, with the executive drawn from and accountable to the legislature!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">British Cabinet</div>
+        <div class="note-line">The British Cabinet is the real executive authority, headed by the Prime Minister, who functions as "primus inter pares" (first among equals) rather than a dominant, unchecked leader!</div>
+        <div class="note-line">It operates on the principle of collective responsibility — the Cabinet as a whole is accountable to Parliament for its decisions — and is drawn from the majority party in the House of Commons, with secrecy maintained over Cabinet proceedings!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">French Constitution</div>
+        <div class="note-line">France follows a semi-presidential (dual executive) system under the Fifth Republic Constitution (1958), where both the President and the Prime Minister hold real executive power!</div>
+        <div class="note-line">This system allows for "cohabitation," where the President and Prime Minister may belong to different, even opposing, political parties simultaneously!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">French President</div>
+        <div class="note-line">The French President is directly elected by the people (since 1962), and serves a term of 5 years (reduced from the earlier 7-year term since 2000)!</div>
+        <div class="note-line">The President holds strong powers, including the ability to dissolve the National Assembly and invoke emergency powers under Article 16, while the Prime Minister generally handles domestic governance and remains accountable to the National Assembly!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Japanese Constitution</div>
+        <div class="note-line">Japan's current Constitution, adopted in 1947 in the aftermath of World War II, is often called the "Postwar Constitution"!</div>
+        <div class="note-line">The Emperor serves as a purely symbolic head of state without real governing power, while the Prime Minister, operating within a parliamentary system, holds actual executive authority!</div>
+        <div class="note-line">Article 9, a distinctive pacifist clause, renounces war as a sovereign right of the nation and prohibits the maintenance of armed forces for war-making purposes!</div>
+        <div class="note-line">The legislature (the Diet) is bicameral, comprising the House of Representatives and the House of Councillors!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Soviet Constitution</div>
+        <div class="note-line">The Soviet Union was governed successively by the 1936 Constitution (under Stalin) and the 1977 Constitution (under Brezhnev), both establishing a single-party state under the Communist Party!</div>
+        <div class="note-line">The Supreme Soviet functioned as the nominal legislature, but real power rested with the Communist Party leadership; the state was federal in form but functioned as a highly centralized, unitary system in practice, dominated entirely by the CPSU — the USSR dissolved in 1991!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Russian Constitution</div>
+        <div class="note-line">The current Russian Constitution, adopted in 1993 in the post-Soviet era, establishes a semi-presidential system!</div>
+        <div class="note-line">The President is directly elected and holds very substantial power, with a 6-year term following a 2008 constitutional amendment; the Prime Minister heads the government but remains subordinate to the President!</div>
+        <div class="note-line">The legislature, the Federal Assembly, is bicameral, comprising the State Duma and the Federation Council!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Chinese Constitution</div>
+        <div class="note-line">China's current Constitution, adopted in 1982 and amended several times since, establishes a single-party state led by the Communist Party of China (CPC)!</div>
+        <div class="note-line">The National People's Congress (NPC) is nominally the supreme organ of state power, but real authority rests with the CPC leadership, especially the President (who typically also serves as CPC General Secretary); China remains a unitary state!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Swiss Constitution</div>
+        <div class="note-line">Switzerland has a federal constitutional structure with strong decentralization, and is notable for its extensive use of direct democracy mechanisms — referendums and citizen initiatives — to shape law and policy!</div>
+        <div class="note-line">Its executive branch is a unique 7-member collegial body called the Federal Council, which exercises collective headship of state, with the ceremonial position of President rotating annually among its members!</div>
+        <div class="note-line">Switzerland is also known for its long-standing tradition of political and military neutrality in foreign affairs!</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="summary-bar">
+    <div class="summary-label">Summary</div>
+    <div class="summary-text">This chapter compares constitutional systems worldwide: the US Constitution (written, rigid, federal, presidential, dual citizenship) and its President (combined head of state/govt, Electoral College-elected, fixed term); the UK's unwritten, flexible, unitary system built on Parliamentary sovereignty and a collectively responsible Cabinet led by a "first among equals" PM; France's semi-presidential dual executive (President with strong emergency/dissolution powers, PM handling domestic affairs, cohabitation possible); Japan's postwar Constitution with a symbolic Emperor, real-power PM, and the pacifist Article 9; the Soviet Union's single-party, CPSU-dominated system (1936/1977 Constitutions, dissolved 1991) succeeded by Russia's 1993 semi-presidential Constitution with a powerful directly-elected President; China's 1982 Constitution and CPC-led unitary single-party system; and Switzerland's uniquely collegial 7-member Federal Council executive combined with extensive direct democracy and a tradition of neutrality.</div>
+  </div>
+</div>

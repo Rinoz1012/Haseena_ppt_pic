@@ -1,0 +1,106 @@
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .page { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; max-width: 680px; margin: 1rem auto; font-family: var(--font-sans); }
+  .page-header { background: #1F4E79; color: #fff; padding: 10px 18px; display: flex; justify-content: space-between; align-items: center; }
+  .page-header .title { font-size: 14px; font-weight: 500; }
+  .page-header .meta { font-size: 12px; opacity: 0.8; }
+  .page-body { display: grid; grid-template-columns: 1fr 2fr; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-col { padding: 14px 12px; background: var(--color-background-secondary); border-right: 1.5px dashed var(--color-border-secondary); }
+  .main-col { padding: 14px 16px; }
+  .col-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); margin-bottom: 10px; text-transform: uppercase; }
+  .topic-block { margin-bottom: 10px; }
+  .topic-title { font-size: 13px; font-weight: 500; color: #1F4E79; border-left: 3px solid #1F4E79; padding-left: 8px; margin-bottom: 4px; }
+  .note-line { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.55; padding: 2px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .note-line:last-child { border-bottom: none; }
+  .tag { display: inline-block; background: #EBF3FB; color: #1F4E79; font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; margin-right: 4px; }
+  .cue-item { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px; line-height: 1.5; padding-bottom: 6px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-item:last-child { border-bottom: none; }
+  .cue-keyword { font-weight: 500; color: var(--color-text-primary); font-size: 12px; display: block; margin-bottom: 2px; }
+  .mnemonic { background: #FFF8E1; border: 0.5px solid #F9A825; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #5D4037; margin-top: 4px; }
+  .alert { background: #FFEBEE; border: 0.5px solid #EF9A9A; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #B71C1C; margin-top: 4px; }
+  .summary-bar { padding: 12px 18px; background: var(--color-background-secondary); border-top: 1.5px solid #1F4E79; }
+  .summary-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); text-transform: uppercase; margin-bottom: 4px; }
+  .summary-text { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.6; }
+  .divider { font-size: 11px; font-weight: 500; background: #EBF3FB; color: #1F4E79; padding: 4px 8px; border-radius: 4px; margin-bottom: 8px; }
+</style>
+
+<div class="page">
+  <div class="page-header">
+    <span class="title">80. Elections — Cornell Notes</span>
+    <span class="meta">06 Jul 2026</span>
+  </div>
+
+  <div class="page-body">
+    <div class="cue-col">
+      <div class="col-label">Keywords</div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Electoral System</span>
+        FPTP(First-Past-The-Post) for LS+State Assembly! Territorial constituencies! Winner=highest votes, NOT majority needed!
+        <div class="alert">FPTP ≠ majority system — can win with less than 50% votes!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">RS/Rajya Sabha Election Method</span>
+        Indirect — STV(Single Transferable Vote) by MLAs! Proportional representation, NOT FPTP!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Election Machinery</span>
+        ECI(Art 324) — superintends elections! Returning Officer(each constituency)! Presiding Officer(each polling station)! Electoral Registration Officer(prepares rolls)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Election Process — Stages</span>
+        <div class="mnemonic">NCPV =
+Notification of election
+Candidate nomination + scrutiny + withdrawal
+Poll(voting day) — EVM+VVPAT
+Vote counting + declaration of results</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">More Process Details</span>
+        Model Code of Conduct(MCC) kicks in from date of announcement! Security deposit for candidates! Symbol allotment!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">PYQ Alert</span>
+        <div class="alert">LS/Assembly=DIRECT+FPTP! RS/Legislative Council=INDIRECT+STV(proportional)! Different systems for different Houses — common confusion point!</div>
+      </div>
+    </div>
+
+    <div class="main-col">
+      <div class="col-label">Main Notes</div>
+
+      <div class="divider">Electoral System</div>
+      <div class="topic-block">
+        <div class="note-line">India uses the First-Past-The-Post (FPTP) system for direct elections to the Lok Sabha and State Legislative Assemblies — the country is divided into territorial constituencies, and the candidate securing the most votes in a constituency wins, without needing an absolute majority (over 50%)!</div>
+        <div class="note-line">For indirect elections — such as to the Rajya Sabha and State Legislative Councils — India uses the Single Transferable Vote (STV) system, a form of proportional representation, where MLAs cast votes that can transfer to lower-preference candidates once higher preferences are elected/eliminated!</div>
+      </div>
+
+      <div class="divider">Election Machinery</div>
+      <div class="topic-block">
+        <div class="note-line">The Election Commission of India (Art 324) has overall superintendence, direction, and control over the conduct of elections!</div>
+        <div class="note-line">A Returning Officer is designated for each constituency, responsible for conducting the election there and declaring the result!</div>
+        <div class="note-line">A Presiding Officer is appointed for each polling station to conduct voting there!</div>
+        <div class="note-line">An Electoral Registration Officer is responsible for preparing and revising the electoral rolls for each constituency!</div>
+      </div>
+
+      <div class="divider">Election Process</div>
+      <div class="topic-block">
+        <div class="note-line">The process begins with the ECI issuing a notification announcing the election schedule, which immediately brings the Model Code of Conduct into force!</div>
+        <div class="note-line">This is followed by filing of nominations by candidates, scrutiny of nomination papers by the Returning Officer, and a period for withdrawal of candidature!</div>
+        <div class="note-line">Voting takes place using Electronic Voting Machines (EVMs) along with Voter Verifiable Paper Audit Trail (VVPAT) machines, which allow voters to visually confirm their vote!</div>
+        <div class="note-line">After polling concludes, votes are counted, and results are formally declared by the Returning Officer!</div>
+        <div class="note-line">Candidates are required to pay a security deposit at the time of filing nomination, and are allotted an election symbol (either a reserved party symbol or a free symbol for independents)!</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="summary-bar">
+    <div class="summary-label">Summary</div>
+    <div class="summary-text">India uses FPTP for direct elections to the Lok Sabha and State Assemblies (highest vote-getter wins, no majority required), while indirect elections to the Rajya Sabha and Legislative Councils use the proportional STV system. Election machinery involves the ECI (overall superintendence), Returning Officers (constituency-level), Presiding Officers (polling stations), and Electoral Registration Officers (electoral rolls). The election process runs through notification (triggering the Model Code of Conduct), nomination/scrutiny/withdrawal, polling via EVM+VVPAT, and finally counting and declaration of results.</div>
+  </div>
+</div>
