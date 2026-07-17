@@ -1,0 +1,104 @@
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .page { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; max-width: 680px; margin: 1rem auto; font-family: var(--font-sans); }
+  .page-header { background: #1F4E79; color: #fff; padding: 10px 18px; display: flex; justify-content: space-between; align-items: center; }
+  .page-header .title { font-size: 14px; font-weight: 500; }
+  .page-header .meta { font-size: 12px; opacity: 0.8; }
+  .page-body { display: grid; grid-template-columns: 1fr 2fr; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-col { padding: 14px 12px; background: var(--color-background-secondary); border-right: 1.5px dashed var(--color-border-secondary); }
+  .main-col { padding: 14px 16px; }
+  .col-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); margin-bottom: 10px; text-transform: uppercase; }
+  .topic-block { margin-bottom: 10px; }
+  .topic-title { font-size: 13px; font-weight: 500; color: #1F4E79; border-left: 3px solid #1F4E79; padding-left: 8px; margin-bottom: 4px; }
+  .note-line { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.55; padding: 2px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .note-line:last-child { border-bottom: none; }
+  .tag { display: inline-block; background: #EBF3FB; color: #1F4E79; font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; margin-right: 4px; }
+  .cue-item { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px; line-height: 1.5; padding-bottom: 6px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-item:last-child { border-bottom: none; }
+  .cue-keyword { font-weight: 500; color: var(--color-text-primary); font-size: 12px; display: block; margin-bottom: 2px; }
+  .mnemonic { background: #FFF8E1; border: 0.5px solid #F9A825; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #5D4037; margin-top: 4px; }
+  .alert { background: #FFEBEE; border: 0.5px solid #EF9A9A; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #B71C1C; margin-top: 4px; }
+  .summary-bar { padding: 12px 18px; background: var(--color-background-secondary); border-top: 1.5px solid #1F4E79; }
+  .summary-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); text-transform: uppercase; margin-bottom: 4px; }
+  .summary-text { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.6; }
+  .divider { font-size: 11px; font-weight: 500; background: #EBF3FB; color: #1F4E79; padding: 4px 8px; border-radius: 4px; margin-bottom: 8px; }
+</style>
+
+<div class="page">
+  <div class="page-header">
+    <span class="title">74. Public Services — Cornell Notes</span>
+    <span class="meta">06 Jul 2026</span>
+  </div>
+
+  <div class="page-body">
+    <div class="cue-col">
+      <div class="col-label">Keywords</div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Classification — 3 Types</span>
+        <div class="mnemonic">All-India Services(IAS, IPS, IFoS) — common to Union+States, Union-recruited but STATE-cadre postings
+Central Services(Group A/B/C) — Union depts, e.g. IFS(Foreign), IRS(Revenue)
+State Services(Group A/B/C/D) — State depts, SPSC-recruited</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Basis</span>
+        Part XIV(Art 308-323) = "Services under Union and States"!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Art 309</span>
+        Parliament/State Legislature can regulate recruitment+conditions of service BY LAW! Until such law exists, President/Governor can make RULES!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Art 310 — Doctrine of Pleasure</span>
+        Civil servants(with few exceptions) hold office DURING PLEASURE of President/Governor!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Art 311 — Safeguards</span>
+        Protection against arbitrary dismissal! Dismissal only by authority NOT SUBORDINATE to appointing authority! Reasonable opportunity(show cause) before dismissal!
+        <div class="alert">Exceptions to opportunity requirement: criminal conviction, security-of-state reasons, impracticability of inquiry!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Art 312 — All-India Services</span>
+        Parliament can CREATE a new All-India Service! Requires RAJYA SABHA to pass resolution with 2/3rd majority declaring it necessary(national interest)!
+        <div class="alert">Similar RS special power as Art 249(State List legislation)!</div>
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">PYQ Alert</span>
+        <div class="alert">All-India Services = created via RS 2/3rd resolution, NOT ordinary bill process! Art 311 exceptions = classic PYQ trap(3 specific situations where opportunity NOT required)!</div>
+      </div>
+    </div>
+
+    <div class="main-col">
+      <div class="col-label">Main Notes</div>
+
+      <div class="divider">Classification of Services</div>
+      <div class="topic-block">
+        <div class="note-line">All-India Services — such as the IAS, IPS, and Indian Forest Service — are common to both the Union and the States; officers are recruited and their basic service structure is controlled by the Union, but they serve in state cadres and hold key positions in both central and state administration!</div>
+        <div class="note-line">Central Services — Group A, B, and C services meant for Union government departments and offices, e.g. Indian Foreign Service, Indian Revenue Service!</div>
+        <div class="note-line">State Services — Group A, B, C, and D services for state government departments, recruited primarily through the State Public Service Commission!</div>
+      </div>
+
+      <div class="divider">Constitutional Provisions</div>
+      <div class="topic-block">
+        <div class="note-line">Part XIV of the Constitution (Art 308-323) deals with "Services under the Union and the States"!</div>
+        <div class="note-line">Art 309 empowers Parliament and State Legislatures to regulate recruitment and conditions of service of persons appointed to public services by law; until such a law is enacted, the President or the Governor may make rules for the purpose!</div>
+        <div class="note-line">Art 310 embodies the doctrine of pleasure — civil servants, with certain specific exceptions, hold office during the pleasure of the President (for Union services) or the Governor (for state services)!</div>
+        <div class="note-line">Art 311 provides key safeguards against arbitrary dismissal, removal, or reduction in rank — such action can only be taken by an authority not subordinate to the one that made the appointment, and the civil servant must be given a reasonable opportunity to show cause against the proposed action!</div>
+        <div class="note-line">This opportunity requirement does NOT apply in three specific situations: where the person is dismissed on the ground of conduct which led to conviction on a criminal charge; where the disciplinary authority is satisfied that giving such an opportunity is not expedient for reasons connected with the security of the state; or where it is not reasonably practicable to hold such an inquiry!</div>
+        <div class="note-line">Art 312 empowers Parliament to create a new All-India Service common to the Union and the States, but only if the Rajya Sabha passes a resolution, by a two-thirds majority of members present and voting, declaring that it is necessary or expedient in the national interest to do so!</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="summary-bar">
+    <div class="summary-label">Summary</div>
+    <div class="summary-text">Public services in India are classified into All-India Services (common to Union and states, e.g. IAS/IPS), Central Services (Union departments), and State Services (state departments). Governed by Part XIV (Art 308-323): Art 309 lets legislatures/executives regulate recruitment and service conditions; Art 310 embodies the doctrine of pleasure (tenure at the President's/Governor's pleasure); Art 311 safeguards against arbitrary dismissal, requiring a reasonable opportunity to be heard (with three specific exceptions — criminal conviction, state security, or impracticability of inquiry); and Art 312 allows Parliament to create new All-India Services, but only after the Rajya Sabha passes a resolution with a two-thirds majority declaring it necessary in the national interest.</div>
+  </div>
+</div>
