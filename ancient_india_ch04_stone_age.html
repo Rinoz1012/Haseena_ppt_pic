@@ -1,0 +1,111 @@
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .page { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; max-width: 680px; margin: 1rem auto; font-family: var(--font-sans); }
+  .page-header { background: #1F4E79; color: #fff; padding: 10px 18px; display: flex; justify-content: space-between; align-items: center; }
+  .page-header .title { font-size: 14px; font-weight: 500; }
+  .page-header .meta { font-size: 12px; opacity: 0.8; }
+  .page-body { display: grid; grid-template-columns: 1fr 2fr; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-col { padding: 14px 12px; background: var(--color-background-secondary); border-right: 1.5px dashed var(--color-border-secondary); }
+  .main-col { padding: 14px 16px; }
+  .col-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); margin-bottom: 10px; text-transform: uppercase; }
+  .topic-block { margin-bottom: 9px; }
+  .topic-title { font-size: 12.5px; font-weight: 500; color: #1F4E79; border-left: 3px solid #1F4E79; padding-left: 8px; margin-bottom: 3px; }
+  .note-line { font-size: 12px; color: var(--color-text-primary); line-height: 1.5; padding: 1px 0; }
+  .cue-item { font-size: 11.5px; color: var(--color-text-secondary); margin-bottom: 7px; line-height: 1.45; padding-bottom: 5px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cue-item:last-child { border-bottom: none; }
+  .cue-keyword { font-weight: 500; color: var(--color-text-primary); font-size: 12px; display: block; margin-bottom: 1px; }
+  .mnemonic { background: #FFF8E1; border: 0.5px solid #F9A825; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #5D4037; margin-top: 4px; }
+  .alert { background: #FFEBEE; border: 0.5px solid #EF9A9A; border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #B71C1C; margin-top: 4px; }
+  .summary-bar { padding: 12px 18px; background: var(--color-background-secondary); border-top: 1.5px solid #1F4E79; }
+  .summary-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--color-text-tertiary); text-transform: uppercase; margin-bottom: 4px; }
+  .summary-text { font-size: 12.5px; color: var(--color-text-primary); line-height: 1.6; }
+</style>
+
+<div class="page">
+  <div class="page-header">
+    <span class="title">Ch 4 — Stone Age</span>
+    <span class="meta">19 Jul 2026</span>
+  </div>
+
+  <div class="page-body">
+    <div class="cue-col">
+      <div class="col-label">Keywords</div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">3 Phases</span>
+        <div class="mnemonic">Paleolithic(Old) → Mesolithic(Middle) → Neolithic(New)</div>
+        Classified by TOOL TYPE + way of life!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Paleolithic</span>
+        Hunter-gatherers, NOMADIC! Tools=quartzite hand axes, choppers, cleavers! Sub-phases=Lower(crude)→Middle(flakes)→Upper(blades/burins)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Paleolithic Sites</span>
+        Bhimbetka(MP, rock paintings, UNESCO)! Hunsgi(Karnataka)! Kurnool caves(AP)! Didwana(Rajasthan)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Mesolithic</span>
+        TRANSITIONAL! Climate warmer(post Ice Age)! Tools=MICROLITHS! First animal domestication(dog)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Mesolithic Sites</span>
+        Bagor(Rajasthan)! Langhnaj(Gujarat)! Adamgarh(MP)! Sarai Nahar Rai(UP — burials found)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Neolithic</span>
+        AGRICULTURE begins("Neolithic Revolution")! SETTLED villages! Polished tools! POTTERY introduced!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">Neolithic Sites</span>
+        Mehrgarh(Baluchistan — earliest farming evidence)! Burzahom(Kashmir)! Chirand(Bihar)! Koldihwa(UP — early rice)!
+      </div>
+
+      <div class="cue-item">
+        <span class="cue-keyword">PYQ Alert</span>
+        <div class="alert">Bhimbetka=Paleolithic+cave paintings+UNESCO! Neolithic Revolution=biggest shift, nomadic→settled farming! Mehrgarh=earliest subcontinental farming evidence!</div>
+      </div>
+    </div>
+
+    <div class="main-col">
+      <div class="col-label">Main Notes</div>
+
+      <div class="topic-block">
+        <div class="topic-title">The Three Phases of the Stone Age</div>
+        <div class="note-line">The Stone Age, the long period when stone was the primary tool-making material, is divided into three phases — Paleolithic (Old Stone Age), Mesolithic (Middle Stone Age), and Neolithic (New Stone Age) — classified according to tool type and the corresponding way of life!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Paleolithic Age</div>
+        <div class="note-line">People during this period were nomadic hunter-gatherers, using quartzite stone to make hand axes, choppers, and cleavers!</div>
+        <div class="note-line">The period is sub-divided into Lower Paleolithic (crude tools), Middle Paleolithic (smaller flake tools), and Upper Paleolithic (more refined blade and burin tools)!</div>
+        <div class="note-line">Important sites include Bhimbetka (Madhya Pradesh — famous for rock shelters and paintings, a UNESCO World Heritage Site), Hunsgi (Karnataka), the Kurnool caves (Andhra Pradesh), and Didwana (Rajasthan)!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Mesolithic Age</div>
+        <div class="note-line">This transitional period occurred as the climate warmed following the Ice Age, characterized by the use of microliths (small, sharp stone tools) and the beginning of animal domestication, with the dog believed to be among the earliest domesticated animals!</div>
+        <div class="note-line">Key sites include Bagor (Rajasthan), Langhnaj (Gujarat), Adamgarh (Madhya Pradesh), and Sarai Nahar Rai (Uttar Pradesh), where burial evidence has also been found!</div>
+      </div>
+
+      <div class="topic-block">
+        <div class="topic-title">Neolithic Age</div>
+        <div class="note-line">The Neolithic Age marks the beginning of agriculture — the "Neolithic Revolution" — the most transformative shift in early human history, moving communities from nomadic life to settled villages!</div>
+        <div class="note-line">Tools became polished and refined, and pottery was introduced, along with domestication of both plants and animals!</div>
+        <div class="note-line">Important sites include Mehrgarh (Baluchistan, Pakistan — earliest evidence of farming in the subcontinent), Burzahom (Kashmir), Chirand (Bihar), and Koldihwa (Uttar Pradesh — early rice cultivation evidence)!</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="summary-bar">
+    <div class="summary-label">Summary</div>
+    <div class="summary-text">The Stone Age divides into Paleolithic (nomadic hunter-gatherers using quartzite hand axes/choppers; key sites: Bhimbetka, Hunsgi, Kurnool caves, Didwana), Mesolithic (transitional, microliths, first animal domestication; key sites: Bagor, Langhnaj, Adamgarh, Sarai Nahar Rai), and Neolithic (the "Neolithic Revolution" — agriculture, settled villages, polished tools, pottery; key sites: Mehrgarh, Burzahom, Chirand, Koldihwa) phases, marking humanity's gradual transition from nomadic survival to settled agricultural life.</div>
+  </div>
+</div>
