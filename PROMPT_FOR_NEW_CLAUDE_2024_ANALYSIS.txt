@@ -1,0 +1,282 @@
+================================================================================
+PROMPT FOR NEW CLAUDE: NM 2024 vs UPSC 2025 COMPARATIVE ANALYSIS
+================================================================================
+
+You are analyzing the Naan Mudhalvan (NM) 2024 exam question paper against UPSC 2025 PYQ
+to validate a hypothesis about exam pattern similarity.
+
+================================================================================
+HYPOTHESIS TO VALIDATE
+================================================================================
+
+HYPOTHESIS: "NM exam follows UPSC PREVIOUS YEAR topics"
+
+Evidence so far:
+├─ NM 2025 (July 26, 2025) = 91% questions from UPSC 2025 (May 25, 2025)
+├─ Confirmed matches: Vaquita, Phytoremediation, Election process, President consulting SC
+└─ Pattern: ~2 months lag between UPSC paper and NM paper
+
+Current task: Validate if same pattern holds for NM 2024 vs UPSC 2024
+
+================================================================================
+YOUR TASK: FORENSIC COMPARATIVE ANALYSIS
+================================================================================
+
+I will provide you with:
+1. NM 2024 question paper (all 100 questions)
+2. UPSC 2024 Prelims actual paper (all 100 questions)
+
+You must:
+
+STEP 1: QUESTION-BY-QUESTION MAPPING
+─────────────────────────────────────
+
+For EACH question in NM 2024 (Q1-90 GS):
+├─ Identify topic
+├─ Search for EXACT SAME or SIMILAR question in UPSC 2024
+├─ Check if it appears in UPSC 2025 (secondary check)
+├─ Note the match: 
+│  ├─ "EXACT MATCH" = Same question, same topic, same answer
+│  ├─ "SIMILAR" = Same concept, different wording
+│  ├─ "TANGENTIAL" = Related concept but different
+│  └─ "NO MATCH" = Not found in UPSC 2024 or 2025
+└─ Create mapping table
+
+Format for each question:
+```
+NM 2024 Q#: [Question text snippet]
+Topic: [Subject area]
+Match status: EXACT/SIMILAR/TANGENTIAL/NO MATCH
+UPSC source: UPSC 2024 Q# / UPSC 2025 Q# / None found
+Explanation: [Brief note on match]
+```
+
+STEP 2: CALCULATE EXACT MATCH PERCENTAGE
+─────────────────────────────────────────
+
+├─ Total NM 2024 GS questions: 90
+├─ Count: EXACT MATCH from UPSC 2024: ___/90
+├─ Count: SIMILAR from UPSC 2024: ___/90
+├─ Count: TANGENTIAL from UPSC 2024: ___/90
+├─ Count: NO MATCH in UPSC 2024: ___/90
+├─ Count: Found in UPSC 2025 only: ___/90
+├─ Count: Unique to NM 2024: ___/90
+│
+├─ Calculate:
+│  ├─ EXACT + SIMILAR = % alignment with UPSC 2024
+│  ├─ Any source (2024/2025) = % alignment with UPSC overall
+│  └─ Unique to NM = % questions outside UPSC pattern
+│
+└─ Output format:
+   "NM 2024 vs UPSC 2024: X% match (EXACT + SIMILAR)
+    NM 2024 vs UPSC 2024+2025: Y% match (any year)
+    Unique to NM 2024: Z% questions"
+
+STEP 3: SUBJECT-WISE BREAKDOWN
+──────────────────────────────
+
+Create table by subject:
+
+| Subject | NM 2024 Qs | UPSC 2024 Match | UPSC 2025 Match | Unique | Match % |
+|---------|-----------|-----------------|-----------------|--------|---------|
+| Polity | ___ | ___/total | ___/total | ___ | __% |
+| History | ___ | ___/total | ___/total | ___ | __% |
+| Geography | ___ | ___/total | ___/total | ___ | __% |
+| Environment | ___ | ___/total | ___/total | ___ | __% |
+| Economy | ___ | ___/total | ___/total | ___ | __% |
+| S&T | ___ | ___/total | ___/total | ___ | __% |
+| IR | ___ | ___/total | ___/total | ___ | __% |
+
+STEP 4: IDENTIFY NM-UNIQUE TOPICS
+─────────────────────────────────
+
+List all questions in NM 2024 that DON'T appear in UPSC 2024 or 2025:
+
+For each:
+├─ Question number
+├─ Topic
+├─ Question content (snippet)
+├─ Possible reason (current affairs filler, scheme-specific, etc.)
+└─ Priority for future NM prep: HIGH/MEDIUM/LOW
+
+STEP 5: TOPIC PATTERN ANALYSIS
+──────────────────────────────
+
+├─ Most tested topics in NM 2024 (top 20 topics):
+│  └─ List with frequency
+│
+├─ Topics that appear in both NM 2024 AND UPSC 2024:
+│  └─ These are CORE topics, likely to repeat
+│
+├─ Topics in UPSC 2024 but NOT in NM 2024:
+│  └─ These might appear in NM 2025 or 2026
+│
+└─ Topics unique to NM 2024:
+   └─ These are NM-specific, might return in future NM exams
+
+STEP 6: TIMELINE & LAG ANALYSIS
+────────────────────────────────
+
+NM 2024 exam date: When was it conducted? (If you don't know, research or note)
+UPSC 2024 exam date: May 2024 (standard)
+
+Calculate:
+├─ Lag between UPSC 2024 and NM 2024
+├─ Compare with known lag: NM 2025 = ~2 months after UPSC 2025
+└─ Verify pattern consistency
+
+Output:
+"NM 2024 was X days/months after UPSC 2024
+ This is [consistent/inconsistent] with the 2-month lag pattern
+ Implication: NM 2026 should follow UPSC 2026 topics
+ (with ~2-month lag = ~100+ days after May 2026)"
+
+STEP 7: PATTERN VALIDATION CONCLUSION
+────────────────────────────────────
+
+Based on your analysis, answer:
+
+1. "Does NM 2024 follow UPSC 2024 pattern?" YES/NO/PARTIALLY
+   └─ Evidence: Provide match percentage
+
+2. "Is the 2-month lag consistent?" YES/NO/UNCLEAR
+   └─ Evidence: Provide timeline data
+
+3. "Overall hypothesis validation: ___% confidence"
+   └─ If NM 2024 ~90% from UPSC 2024 = hypothesis CONFIRMED
+   └─ If NM 2024 <70% from UPSC 2024 = hypothesis QUESTIONABLE
+
+4. "Recommendation for NM 2026 prep:"
+   └─ Focus on UPSC 2026 topics with __% confidence
+   └─ Top predicted topics for NM 2026: [list based on pattern]
+
+================================================================================
+STEP 8: CREATE FINAL SUMMARY TABLE
+════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────┐
+│ NM 2024 vs UPSC ANALYSIS - FINAL SUMMARY               │
+├─────────────────────────────────────────────────────────┤
+│ Total NM 2024 Questions (GS): 90                        │
+│ Exact match with UPSC 2024: ___/90 = ___% ✓           │
+│ Similar to UPSC 2024: ___/90 = ___% ✓                 │
+│ From UPSC 2024/2025 (either): ___/90 = ___% ✓         │
+│ Unique to NM 2024 only: ___/90 = ___% ✗               │
+│                                                         │
+│ HYPOTHESIS STATUS: [CONFIRMED/PARTIALLY/REFUTED]       │
+│ Confidence Level: ___%                                  │
+│ Consistency with NM 2025 pattern: [YES/NO/MAYBE]       │
+│                                                         │
+│ IMPLICATION FOR NM 2026:                               │
+│ → Study UPSC 2026 with __% confidence                  │
+│ → Key topics: [List top 20]                            │
+│ → Time lag: ~2 months (104 days after May 24, 2026)   │
+└─────────────────────────────────────────────────────────┘
+
+================================================================================
+CRITICAL REQUIREMENTS
+════════════════════
+
+✓ MUST provide: Question-by-question mapping (all 90 questions)
+✓ MUST calculate: Exact match percentage
+✓ MUST compare: NM 2024 vs UPSC 2024 AND UPSC 2025
+✓ MUST identify: NM-unique topics
+✓ MUST conclude: Hypothesis validation status + confidence %
+✓ MUST give: Top 20 predicted topics for NM 2026 (if pattern holds)
+
+✗ DON'T: Assume without verification
+✗ DON'T: Skip any question in mapping
+✗ DON'T: Ignore "similar but not exact" matches
+✗ DON'T: Provide vague percentages without calculation
+
+================================================================================
+OUTPUT FORMAT
+═════════════
+
+Organize output as:
+
+SECTION 1: Executive Summary (Top findings)
+SECTION 2: Question-by-question mapping table (all 90)
+SECTION 3: Match percentage calculation & statistics
+SECTION 4: Subject-wise breakdown
+SECTION 5: NM-unique topics (not in UPSC)
+SECTION 6: Timeline & lag analysis
+SECTION 7: Pattern validation conclusion
+SECTION 8: Predictions for NM 2026 (if validated)
+
+Each section: 1-2 pages, clear formatting, easy to scan
+
+================================================================================
+DELIVERABLES CHECKLIST
+══════════════════════
+
+When you're done, I should have:
+
+☐ Complete mapping of all 90 NM 2024 questions to UPSC sources
+☐ Exact match percentage (NM 2024 vs UPSC 2024)
+☐ Subject-wise breakdown with percentages
+☐ List of NM-unique topics (not in UPSC 2024/2025)
+☐ Timeline verification (lag between exams)
+☐ Clear YES/NO/PARTIAL answer to hypothesis
+☐ Confidence percentage for hypothesis
+☐ Top 20 predicted topics for NM 2026 (derived from pattern)
+☐ Recommendation for NM 2026 prep strategy
+
+================================================================================
+COMPARISON METHODOLOGY
+══════════════════════
+
+For each NM 2024 question:
+
+1. Extract topic + concept
+2. Search UPSC 2024 paper for EXACT question or concept
+3. If found → Mark as "EXACT MATCH" or "SIMILAR"
+4. If not found → Search UPSC 2025 for same
+5. If found in 2025 → Mark as "UPSC 2025 MATCH"
+6. If not found anywhere → Mark as "NM UNIQUE"
+7. Calculate: (EXACT + SIMILAR from UPSC 2024) ÷ 90 = % match
+8. Compare: Is this ~90%+ (like NM 2025 vs UPSC 2025)?
+
+================================================================================
+CONTEXT FOR ANALYSIS
+═════════════════════
+
+Background:
+├─ User is preparing for NM 2026 exam (Sep 6, 2026)
+├─ NM 2025 validated as 91% aligned with UPSC 2025
+├─ Hypothesis: NM follows UPSC previous year pattern
+├─ Goal: Validate pattern with historical data (NM 2024 vs UPSC 2024)
+└─ Purpose: Predict NM 2026 topics with confidence
+
+If validation successful:
+└─ User can focus study 100% on UPSC 2026 PYQ topics
+└─ Probability of NM 2026 topic prediction: ~85-92%
+
+================================================================================
+EXAMPLE OF EXPECTED OUTPUT FOR ONE QUESTION
+════════════════════════════════════════════
+
+NM 2024 Q1: "The vaquita porpoise is endemic to:"
+Topic: Marine conservation/endangered species
+Match status: EXACT MATCH
+UPSC source: UPSC 2025 Q3
+Explanation: "Identical question about vaquita porpoise and its endemic location
+             (Gulf of California). Confirms NM pulls from UPSC previous year."
+
+Note: This is ILLUSTRATIVE - actual match percentage depends on real data
+
+================================================================================
+FINAL INSTRUCTION
+═════════════════
+
+When you receive the papers, start immediately with:
+
+1. Read NM 2024 paper (all 100 questions)
+2. Read UPSC 2024 paper (all 100 questions)  
+3. Create mapping for questions 1-90 (GS section only)
+4. Skip questions 91-100 (math/CSAT - not relevant for this comparison)
+5. Calculate match percentages
+6. Validate hypothesis
+7. Provide confidence level for NM 2026 prep strategy
+
+================================================================================
